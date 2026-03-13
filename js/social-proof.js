@@ -61,14 +61,29 @@
   }
 
   function renderReviews(payload) {
+    var reviewsTitle = document.querySelector("#reviews .section-title");
     var summary = qs("reviews-summary");
     var grid = qs("reviews-grid");
+    var googleLink = qs("google-reviews-link");
     var doctoraliaLink = qs("doctoralia-reviews-link");
-    if (doctoraliaLink && cfg.DOCTORALIA_URL) {
-      doctoraliaLink.href = cfg.DOCTORALIA_URL;
-      doctoraliaLink.hidden = false;
-    }
     if (!summary || !grid) return;
+
+    var sourceName = String((payload && payload.source) || "").toLowerCase();
+    var googleHref = cfg.GOOGLE_BUSINESS_URL || "";
+    if (payload && payload.ok && sourceName === "google") {
+      googleHref = payload.reviews_url || payload.canonical_url || payload.place_url || googleHref;
+    }
+    if (googleLink) {
+      googleLink.href = googleHref || "#";
+      googleLink.hidden = !googleHref;
+    }
+    if (doctoraliaLink) {
+      doctoraliaLink.href = cfg.DOCTORALIA_URL || "#";
+      doctoraliaLink.hidden = !(cfg.DOCTORALIA_URL && sourceName === "doctoralia");
+    }
+    if (reviewsTitle) {
+      reviewsTitle.textContent = sourceName === "google" ? "Avaliacoes Google" : "Avaliacoes publicas";
+    }
 
     if (!payload || !payload.ok) {
       summary.innerHTML = '<div class="social-empty">Nao foi possivel carregar as avaliacoes agora.</div>';
@@ -76,9 +91,15 @@
       return;
     }
 
-    var rating = payload.rating != null ? String(payload.rating).replace(".", ",") : "--";
+    var ratingValue = Number(payload.rating);
+    var rating = payload.rating != null && Number.isFinite(ratingValue)
+      ? ratingValue.toLocaleString("pt-BR", { minimumFractionDigits: 1, maximumFractionDigits: 1 })
+      : "--";
     var reviewCount = Number(payload.review_count || 0);
     var staleLabel = payload.stale ? " - cache local" : "";
+    var countCopy = sourceName === "google"
+      ? "avaliacoes publicas no Google"
+      : "opinioes publicas de pacientes";
 
     summary.innerHTML = [
       '<div class="social-source-shell">',
@@ -86,7 +107,7 @@
       '    <span class="social-kicker">Fonte principal: ' + escapeHtml(payload.source_label || "Doctoralia") + staleLabel + "</span>",
       '    <div class="social-rating-row">',
       '      <strong class="social-rating-value">' + escapeHtml(rating) + "</strong>",
-      '      <div class="social-rating-copy">' + escapeHtml(reviewCount.toLocaleString("pt-BR")) + " opinioes publicas de pacientes</div>",
+      '      <div class="social-rating-copy">' + escapeHtml(reviewCount.toLocaleString("pt-BR")) + " " + escapeHtml(countCopy) + "</div>",
       "    </div>",
       "  </div>",
       "</div>"
@@ -100,9 +121,18 @@
 
     grid.innerHTML = reviews.map(function (review) {
       var author = escapeHtml(review.author || "Paciente");
-      var service = trimText(review.service || "", 48);
-      var dateLabel = formatDate(review.date_published);
-      var metaParts = [service, dateLabel].filter(Boolean).map(escapeHtml);
+      var metaParts;
+
+      if (sourceName === "google") {
+        metaParts = [
+          trimText(review.reviewer_meta || "", 48),
+          review.relative_date || ""
+        ].filter(Boolean).map(escapeHtml);
+      } else {
+        var service = trimText(review.service || "", 48);
+        var dateLabel = formatDate(review.date_published);
+        metaParts = [service, dateLabel].filter(Boolean).map(escapeHtml);
+      }
 
       return [
         '<article class="review-card">',
@@ -181,16 +211,36 @@
   }
 
   function loadReviews() {
-    if (!cfg.DOCTORALIA_URL) {
-      renderReviews({ ok: false });
+    function fallbackToDoctoralia() {
+      if (!cfg.DOCTORALIA_URL) {
+        renderReviews({ ok: false });
+        return;
+      }
+
+      apiGet("/public/doctoralia_reviews.php?url=" + encodeURIComponent(cfg.DOCTORALIA_URL))
+        .then(function (payload) {
+          renderReviews(payload && payload.ok ? payload : { ok: false });
+        })
+        .catch(function () {
+          renderReviews({ ok: false });
+        });
+    }
+
+    if (!cfg.GOOGLE_BUSINESS_URL) {
+      fallbackToDoctoralia();
       return;
     }
 
-    apiGet("/public/doctoralia_reviews.php?url=" + encodeURIComponent(cfg.DOCTORALIA_URL))
-      .then(renderReviews)
-      .catch(function () {
-        renderReviews({ ok: false });
-      });
+    apiGet("/public/google_reviews.php?url=" + encodeURIComponent(cfg.GOOGLE_BUSINESS_URL))
+      .then(function (payload) {
+        if (payload && payload.ok) {
+          renderReviews(payload);
+          return;
+        }
+
+        fallbackToDoctoralia();
+      })
+      .catch(fallbackToDoctoralia);
   }
 
   function loadInstagram() {
@@ -207,11 +257,6 @@
   }
 
   document.addEventListener("DOMContentLoaded", function () {
-    var reviewsTitle = document.querySelector("#reviews .section-title");
-    if (reviewsTitle) {
-      reviewsTitle.textContent = "Avaliacoes publicas";
-    }
-
     loadReviews();
     loadInstagram();
   });

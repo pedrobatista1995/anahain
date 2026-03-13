@@ -5,9 +5,13 @@ data/*
 !data/.gitignore
 
 tmp-*.png
+tmp-*.txt
+tmp-*.html
+tmp-*.js
 _mobile-home.png
 _tablet-home.png
 _test.txt
+scripts/__pycache__/
 
 .DS_Store
 Thumbs.db

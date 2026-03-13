@@ -26,8 +26,9 @@ Se a base iniciar vazia:
 Este projeto foi preparado para deploy no Render com Docker.
 
 - O arquivo `render.yaml` cria um Web Service com `runtime: docker`.
-- O arquivo `Dockerfile` instala PHP + Apache + SQLite.
+- O arquivo `Dockerfile` instala PHP + Apache + SQLite e o runtime de scraping do Google com Python + Playwright.
 - O projeto usa `MEDICAL_DATA_DIR` para gravar `app.sqlite` e `verse-cache.json` fora da pasta publica.
+- Os reviews do Google sao buscados no backend por scraping com cache local; se o Google falhar no momento, o site usa o ultimo cache valido.
 
 Passos:
 
@@ -52,6 +53,18 @@ Limitacoes importantes do plano Free no Render:
 - o plano Free nao permite envio SMTP nas portas 25, 465 e 587.
 
 Para uma demo temporaria isso pode servir. Para uma demo estavel com dados preservados, o caminho correto e usar plano pago com disco persistente ou migrar o banco para Postgres.
+
+## Reviews e redes sociais
+
+- Instagram publico: carregado internamente pelo backend e servido com proxy local para as imagens.
+- Google reviews: carregados internamente por um scraper com Playwright a partir do link publico configurado em `GOOGLE_BUSINESS_URL`.
+- Doctoralia: mantido como fallback automatico se o Google bloquear ou nao responder.
+
+Se voce rodar localmente e o Google nao carregar:
+
+- confirme que `python` ou `python3` esta disponivel no sistema;
+- instale `playwright`;
+- instale o navegador Chromium do Playwright.
 
 ## Publicacao para demo do cliente
 
