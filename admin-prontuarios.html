@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prontuários</title>
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body data-admin-page="records">
+  <main class="erp-wrap">
+    <section class="admin-shell">
+      <aside class="admin-sidebar">
+        <div class="admin-brand">
+          <p class="eyebrow is-light">Painel médico</p>
+          <h1>Prontuários</h1>
+          <p>Uma tela exclusiva para busca de consultas, evolução clínica e impressão de prescrição.</p>
+        </div>
+
+        <nav class="admin-nav">
+          <span class="admin-nav-group-title">Agenda</span>
+          <a class="admin-nav-link" data-page="dashboard" href="admin-dashboard.html">Dashboard</a>
+          <a class="admin-nav-link" data-page="agenda" href="admin-agenda.html">Agenda e bloqueios</a>
+          <a class="admin-nav-link" data-page="bookings" href="admin-atendimentos.html">Atendimentos</a>
+          <a class="admin-nav-link" data-page="records" href="admin-prontuarios.html">Prontuários</a>
+          <span class="admin-nav-group-title">Gestão</span>
+          <a class="admin-nav-link" data-page="metrics" href="admin-metricas.html">Métricas</a>
+          <a class="admin-nav-link" data-page="settings" href="admin-configuracoes.html">Clínica e agenda</a>
+          <a class="admin-nav-link" data-page="notifications" href="admin-notificacoes.html">Notificações</a>
+          <a class="admin-nav-link" data-page="security" href="admin-seguranca.html">Segurança</a>
+          <a class="admin-nav-link" data-page="leads" href="leads.html">Leads</a>
+        </nav>
+
+        <div class="sidebar-summary">
+          <article class="summary-card">
+            <span>Mês carregado</span>
+            <strong id="sidebar-report-month">--/----</strong>
+          </article>
+          <article class="summary-card">
+            <span>Paciente em foco</span>
+            <strong id="sidebar-selected-day">Nenhum</strong>
+          </article>
+        </div>
+
+        <div class="sidebar-actions">
+          <button id="refresh-page" type="button">Atualizar</button>
+          <button id="logout-btn" type="button" class="ghost-btn ghost-btn-light">Sair</button>
+        </div>
+      </aside>
+
+      <section class="admin-main">
+        <header class="page-header">
+          <div>
+            <p class="eyebrow">Registro clínico</p>
+            <h2>Prontuário do atendimento</h2>
+            <p class="page-description">Busque a consulta, registre evolução clínica e imprima a prescrição sem ruído de outras áreas.</p>
+          </div>
+          <div class="page-toolbar">
+            <label for="report-month">Mês de referência</label>
+            <input id="report-month" type="month">
+            <button id="apply-report-month" type="button">Aplicar</button>
+          </div>
+        </header>
+
+        <section class="panel">
+          <div class="records-shell">
+            <aside class="records-sidebar">
+              <label for="records-search">Buscar paciente ou data</label>
+              <input id="records-search" type="search" placeholder="Nome, e-mail, telefone ou data">
+              <div id="records-booking-list" class="records-booking-list"></div>
+            </aside>
+
+            <section class="records-editor">
+              <div id="record-empty" class="empty-state">
+                Selecione uma consulta na coluna ao lado para abrir o prontuário.
+              </div>
+
+              <div id="record-editor" class="hidden">
+                <article class="record-patient-card">
+                  <div>
+                    <span class="record-label">Paciente</span>
+                    <strong id="record-patient-name">-</strong>
+                  </div>
+                  <div>
+                    <span class="record-label">Contato</span>
+                    <span id="record-patient-contact">-</span>
+                  </div>
+                  <div>
+                    <span class="record-label">Consulta</span>
+                    <span id="record-booking-date">-</span>
+                  </div>
+                  <div>
+                    <span class="record-label">Status</span>
+                    <span id="record-booking-status">-</span>
+                  </div>
+                </article>
+
+                <form id="record-form" class="record-form" novalidate>
+                  <div class="field-group">
+                    <label for="record-chief-complaint">Queixa principal</label>
+                    <textarea id="record-chief-complaint" rows="3"></textarea>
+                  </div>
+
+                  <div class="field-group">
+                    <label for="record-clinical-history">História clínica</label>
+                    <textarea id="record-clinical-history" rows="4"></textarea>
+                  </div>
+
+                  <div class="field-group">
+                    <label for="record-examination-notes">Exame e achados</label>
+                    <textarea id="record-examination-notes" rows="4"></textarea>
+                  </div>
+
+                  <div class="field-group">
+                    <label for="record-diagnosis">Hipótese diagnóstica</label>
+                    <textarea id="record-diagnosis" rows="3"></textarea>
+                  </div>
+
+                  <div class="field-group">
+                    <label for="record-conduct">Conduta</label>
+                    <textarea id="record-conduct" rows="4"></textarea>
+                  </div>
+
+                  <div class="field-group">
+                    <label for="record-prescription-text">Receita / prescrição</label>
+                    <textarea id="record-prescription-text" rows="6"></textarea>
+                  </div>
+
+                  <div class="field-group">
+                    <label for="record-follow-up">Acompanhamento</label>
+                    <textarea id="record-follow-up" rows="3"></textarea>
+                  </div>
+
+                  <div class="field-group">
+                    <label for="record-private-notes">Observações internas</label>
+                    <textarea id="record-private-notes" rows="4"></textarea>
+                  </div>
+
+                  <div class="stack-actions">
+                    <button type="submit">Salvar prontuário</button>
+                    <button id="print-prescription-btn" type="button" class="ghost-btn">Imprimir receita</button>
+                  </div>
+                </form>
+
+                <p id="record-feedback" class="note"></p>
+              </div>
+            </section>
+          </div>
+        </section>
+      </section>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="js/admin-common.js"></script>
+  <script src="js/admin-records-page.js"></script>
+</body>
+</html>

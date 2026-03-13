@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Métricas do sistema</title>
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body data-admin-page="metrics">
+  <main class="erp-wrap">
+    <section class="admin-shell">
+      <aside class="admin-sidebar">
+        <div class="admin-brand">
+          <p class="eyebrow is-light">Painel médico</p>
+          <h1>Métricas</h1>
+          <p>Uma página exclusiva para indicadores, sem competir com a leitura da agenda no dashboard.</p>
+        </div>
+
+        <nav class="admin-nav">
+          <span class="admin-nav-group-title">Agenda</span>
+          <a class="admin-nav-link" data-page="dashboard" href="admin-dashboard.html">Dashboard</a>
+          <a class="admin-nav-link" data-page="agenda" href="admin-agenda.html">Agenda e bloqueios</a>
+          <a class="admin-nav-link" data-page="bookings" href="admin-atendimentos.html">Atendimentos</a>
+          <a class="admin-nav-link" data-page="records" href="admin-prontuarios.html">Prontuários</a>
+          <span class="admin-nav-group-title">Gestão</span>
+          <a class="admin-nav-link" data-page="metrics" href="admin-metricas.html">Métricas</a>
+          <a class="admin-nav-link" data-page="settings" href="admin-configuracoes.html">Clínica e agenda</a>
+          <a class="admin-nav-link" data-page="notifications" href="admin-notificacoes.html">Notificações</a>
+          <a class="admin-nav-link" data-page="security" href="admin-seguranca.html">Segurança</a>
+          <a class="admin-nav-link" data-page="leads" href="leads.html">Leads</a>
+        </nav>
+
+        <div class="sidebar-summary">
+          <article class="summary-card">
+            <span>Mês ativo</span>
+            <strong id="sidebar-report-month">--/----</strong>
+          </article>
+        </div>
+
+        <div class="sidebar-actions">
+          <button id="refresh-page" type="button">Atualizar</button>
+          <button id="logout-btn" type="button" class="ghost-btn ghost-btn-light">Sair</button>
+        </div>
+      </aside>
+
+      <section class="admin-main">
+        <header class="page-header">
+          <div>
+            <p class="eyebrow">Indicadores</p>
+            <h2>Métricas do consultório</h2>
+            <p class="page-description">Visualize os indicadores em uma tela separada para manter o dashboard limpo.</p>
+          </div>
+          <div class="page-toolbar">
+            <label for="report-month">Mês de referência</label>
+            <input id="report-month" type="month">
+            <button id="apply-report-month" type="button">Aplicar</button>
+          </div>
+        </header>
+
+        <p id="metrics-feedback" class="note"></p>
+
+        <section class="panel">
+          <div class="panel-heading">
+            <div>
+              <h3>Indicadores do mês</h3>
+              <p class="note">Leitura mensal de agendamentos, cancelamentos e origem dos cliques.</p>
+            </div>
+          </div>
+          <div id="monthly-kpis" class="metrics-grid"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-heading">
+            <div>
+              <h3>Métricas acumuladas</h3>
+              <p class="note">Contadores gerais do sistema.</p>
+            </div>
+            <button id="reset-metrics" type="button" class="ghost-btn">Zerar métricas</button>
+          </div>
+          <div id="metrics-grid" class="metrics-grid"></div>
+        </section>
+      </section>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="js/admin-common.js"></script>
+  <script src="js/admin-metrics-page.js"></script>
+</body>
+</html>

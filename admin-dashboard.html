@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard da agenda</title>
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body data-admin-page="dashboard">
+  <main class="erp-wrap">
+    <section class="admin-shell">
+      <aside class="admin-sidebar">
+        <div class="admin-brand">
+          <p class="eyebrow is-light">Painel médico</p>
+          <h1>Agenda clínica</h1>
+          <p>Dashboard focado apenas na leitura da agenda e nos dias com atendimento.</p>
+        </div>
+
+        <nav class="admin-nav">
+          <span class="admin-nav-group-title">Agenda</span>
+          <a class="admin-nav-link" data-page="dashboard" href="admin-dashboard.html">Dashboard</a>
+          <a class="admin-nav-link" data-page="agenda" href="admin-agenda.html">Agenda e bloqueios</a>
+          <a class="admin-nav-link" data-page="bookings" href="admin-atendimentos.html">Atendimentos</a>
+          <a class="admin-nav-link" data-page="records" href="admin-prontuarios.html">Prontuários</a>
+          <span class="admin-nav-group-title">Gestão</span>
+          <a class="admin-nav-link" data-page="metrics" href="admin-metricas.html">Métricas</a>
+          <a class="admin-nav-link" data-page="settings" href="admin-configuracoes.html">Clínica e agenda</a>
+          <a class="admin-nav-link" data-page="notifications" href="admin-notificacoes.html">Notificações</a>
+          <a class="admin-nav-link" data-page="security" href="admin-seguranca.html">Segurança</a>
+          <a class="admin-nav-link" data-page="leads" href="leads.html">Leads</a>
+        </nav>
+
+        <div class="sidebar-summary">
+          <article class="summary-card">
+            <span>Mês ativo</span>
+            <strong id="sidebar-report-month">--/----</strong>
+          </article>
+          <article class="summary-card">
+            <span>Dia em foco</span>
+            <strong id="sidebar-selected-day">Nenhum</strong>
+          </article>
+        </div>
+
+        <div class="sidebar-actions">
+          <button id="refresh-page" type="button">Atualizar</button>
+          <button id="logout-btn" type="button" class="ghost-btn ghost-btn-light">Sair</button>
+        </div>
+      </aside>
+
+      <section class="admin-main">
+        <header class="page-header">
+          <div>
+            <p class="eyebrow">Dashboard</p>
+            <h2>Agenda do mês</h2>
+            <p class="page-description">Uma tela limpa para enxergar rapidamente os dias de atendimento e os pacientes do dia selecionado.</p>
+          </div>
+          <div class="page-toolbar">
+            <label for="report-month">Mês de referência</label>
+            <input id="report-month" type="month">
+            <button id="apply-report-month" type="button">Aplicar</button>
+            <a class="ghost-btn button-link" href="admin-atendimentos.html">Abrir atendimentos</a>
+          </div>
+        </header>
+
+        <p id="page-feedback" class="note"></p>
+
+        <section class="panel">
+          <div class="panel-heading">
+            <div>
+              <h3>Calendário da agenda</h3>
+              <p class="note">Clique em um dia para abrir apenas os atendimentos daquele dia.</p>
+            </div>
+            <div class="calendar-legend">
+              <span class="legend-chip"><span class="legend-dot is-confirmed"></span> Confirmadas</span>
+              <span class="legend-chip"><span class="legend-dot is-free"></span> Vagas</span>
+              <span class="legend-chip"><span class="legend-dot is-blocked"></span> Bloqueado</span>
+            </div>
+          </div>
+
+          <div class="calendar-scroll">
+            <div class="calendar-weekdays">
+              <span>Seg</span>
+              <span>Ter</span>
+              <span>Qua</span>
+              <span>Qui</span>
+              <span>Sex</span>
+              <span>Sáb</span>
+              <span>Dom</span>
+            </div>
+            <div id="calendar-grid" class="calendar-grid"></div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-heading">
+            <div>
+              <h3 id="selected-day-title">Selecione um dia do calendário</h3>
+              <p id="selected-day-summary" class="note">Os atendimentos do dia aparecerão aqui.</p>
+            </div>
+          </div>
+          <div id="selected-day-bookings" class="day-bookings"></div>
+        </section>
+      </section>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="js/admin-common.js"></script>
+  <script src="js/admin-dashboard-page.js"></script>
+</body>
+</html>

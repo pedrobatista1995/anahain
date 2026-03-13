@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Base de Leads</title>
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body data-admin-page="leads">
+  <main class="erp-wrap">
+    <section class="admin-shell">
+      <aside class="admin-sidebar">
+        <div class="admin-brand">
+          <p class="eyebrow is-light">Painel médico</p>
+          <h1>Base de leads</h1>
+          <p>Visualize a base consolidada de contatos sem misturar isso com agenda ou prontuários.</p>
+        </div>
+
+        <nav class="admin-nav">
+          <span class="admin-nav-group-title">Agenda</span>
+          <a class="admin-nav-link" data-page="dashboard" href="admin-dashboard.html">Dashboard</a>
+          <a class="admin-nav-link" data-page="agenda" href="admin-agenda.html">Agenda e bloqueios</a>
+          <a class="admin-nav-link" data-page="bookings" href="admin-atendimentos.html">Atendimentos</a>
+          <a class="admin-nav-link" data-page="records" href="admin-prontuarios.html">Prontuários</a>
+          <span class="admin-nav-group-title">Gestão</span>
+          <a class="admin-nav-link" data-page="metrics" href="admin-metricas.html">Métricas</a>
+          <a class="admin-nav-link" data-page="settings" href="admin-configuracoes.html">Clínica e agenda</a>
+          <a class="admin-nav-link" data-page="notifications" href="admin-notificacoes.html">Notificações</a>
+          <a class="admin-nav-link" data-page="security" href="admin-seguranca.html">Segurança</a>
+          <a class="admin-nav-link" data-page="leads" href="leads.html">Leads</a>
+        </nav>
+
+        <div class="sidebar-summary">
+          <article class="summary-card">
+            <span>Área</span>
+            <strong>Relacionamento</strong>
+          </article>
+        </div>
+
+        <div class="sidebar-actions">
+          <button id="refresh-page" type="button">Atualizar</button>
+          <button id="logout-btn" type="button" class="ghost-btn ghost-btn-light">Sair</button>
+        </div>
+      </aside>
+
+      <section class="admin-main">
+        <section class="panel">
+          <div class="page-head">
+            <div>
+              <p class="eyebrow">Leads</p>
+              <h1>Base de Leads</h1>
+            </div>
+          </div>
+
+          <div class="leads-toolbar">
+            <input id="leads-search" type="text" placeholder="Buscar por nome, e-mail ou telefone">
+            <button id="leads-search-btn" type="button">Buscar</button>
+            <button id="leads-refresh-btn" type="button">Atualizar</button>
+            <button id="leads-export-btn" type="button">Exportar CSV</button>
+          </div>
+
+          <p id="leads-feedback" class="note"></p>
+          <div class="leads-table-wrap">
+            <table class="leads-table">
+              <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th>E-mail</th>
+                  <th>Telefone</th>
+                  <th>Primeiro contato</th>
+                  <th>Último contato</th>
+                  <th>Confirmadas</th>
+                  <th>Canceladas</th>
+                </tr>
+              </thead>
+              <tbody id="leads-tbody"></tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="js/admin-common.js"></script>
+  <script src="js/leads-app.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clínica e agenda</title>
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body data-admin-page="settings">
+  <main class="erp-wrap">
+    <section class="admin-shell">
+      <aside class="admin-sidebar">
+        <div class="admin-brand">
+          <p class="eyebrow is-light">Painel médico</p>
+          <h1>Clínica e agenda</h1>
+          <p>Cadastros públicos e regras principais da agenda em uma página separada e enxuta.</p>
+        </div>
+
+        <nav class="admin-nav">
+          <span class="admin-nav-group-title">Agenda</span>
+          <a class="admin-nav-link" data-page="dashboard" href="admin-dashboard.html">Dashboard</a>
+          <a class="admin-nav-link" data-page="agenda" href="admin-agenda.html">Agenda e bloqueios</a>
+          <a class="admin-nav-link" data-page="bookings" href="admin-atendimentos.html">Atendimentos</a>
+          <a class="admin-nav-link" data-page="records" href="admin-prontuarios.html">Prontuários</a>
+          <span class="admin-nav-group-title">Gestão</span>
+          <a class="admin-nav-link" data-page="metrics" href="admin-metricas.html">Métricas</a>
+          <a class="admin-nav-link" data-page="settings" href="admin-configuracoes.html">Clínica e agenda</a>
+          <a class="admin-nav-link" data-page="notifications" href="admin-notificacoes.html">Notificações</a>
+          <a class="admin-nav-link" data-page="security" href="admin-seguranca.html">Segurança</a>
+          <a class="admin-nav-link" data-page="leads" href="leads.html">Leads</a>
+        </nav>
+
+        <div class="sidebar-summary">
+          <article class="summary-card">
+            <span>Área</span>
+            <strong id="sidebar-report-month">Clínica</strong>
+          </article>
+          <article class="summary-card">
+            <span>Médico</span>
+            <strong id="sidebar-selected-day">-</strong>
+          </article>
+        </div>
+
+        <div class="sidebar-actions">
+          <button id="refresh-page" type="button">Atualizar</button>
+          <button id="logout-btn" type="button" class="ghost-btn ghost-btn-light">Sair</button>
+        </div>
+      </aside>
+
+      <section class="admin-main">
+        <header class="page-header">
+          <div>
+            <p class="eyebrow">Configurações</p>
+            <h2>Dados da clínica e regras da agenda</h2>
+            <p class="page-description">Nesta tela ficam apenas os dados institucionais e os parâmetros que afetam o agendamento público.</p>
+          </div>
+          <div class="page-toolbar">
+            <a class="ghost-btn button-link" href="admin-notificacoes.html">Ir para notificações</a>
+            <a class="ghost-btn button-link" href="admin-seguranca.html">Ir para segurança</a>
+          </div>
+        </header>
+
+        <div class="page-grid">
+          <section class="panel">
+            <div class="panel-heading">
+              <div>
+                <h3>Identidade da clínica</h3>
+                <p class="note">Dados exibidos no ambiente público e na prescrição.</p>
+              </div>
+            </div>
+
+            <form id="settings-form" class="form" novalidate>
+              <label for="clinic-name">Nome da clínica</label>
+              <input id="clinic-name" type="text">
+
+              <label for="doctor-name">Nome do médico</label>
+              <input id="doctor-name" type="text">
+
+              <label for="doctor-whatsapp">WhatsApp do médico</label>
+              <input id="doctor-whatsapp" type="text" placeholder="5511999999999">
+
+              <label for="doctor-email">E-mail do médico</label>
+              <input id="doctor-email" type="email">
+
+              <label for="public-base-url">URL pública do sistema</label>
+              <input id="public-base-url" type="url" placeholder="https://seudominio.com/medical">
+
+              <button type="submit">Salvar dados da clínica</button>
+            </form>
+            <p id="settings-feedback" class="note"></p>
+          </section>
+
+          <section class="panel">
+            <div class="panel-heading">
+              <div>
+                <h3>Regras da agenda</h3>
+                <p class="note">Parâmetros que controlam a janela e a duração dos atendimentos.</p>
+              </div>
+            </div>
+
+            <form id="rules-form" class="form" novalidate>
+              <label for="slot-duration">Duração por horário (min)</label>
+              <input id="slot-duration" type="number" min="10" max="240" step="5">
+
+              <label for="min-notice">Antecedência mínima (horas)</label>
+              <input id="min-notice" type="number" min="0" max="72">
+
+              <label for="max-days">Prazo máximo (dias)</label>
+              <input id="max-days" type="number" min="1" max="365">
+
+              <button type="submit">Salvar regras da agenda</button>
+            </form>
+            <p id="rules-feedback" class="note"></p>
+          </section>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="js/admin-common.js"></script>
+  <script src="js/admin-settings-page.js"></script>
+</body>
+</html>

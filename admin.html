@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login do painel médico</title>
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-login-body">
+  <main class="login-shell">
+    <section class="login-brand">
+      <p class="eyebrow"></p>
+    </section>
+
+    <section class="panel login-panel">
+      <div class="panel-heading">
+        <div>
+          <p class="eyebrow">Acesso clínico</p>
+          <h2>Entrar no painel</h2>
+        </div>
+      </div>
+
+      <form id="login-form" class="form" novalidate>
+        <label for="login-username">Usuário</label>
+        <input id="login-username" type="text" required>
+
+        <label for="login-password">Senha</label>
+        <input id="login-password" type="password" required>
+
+        <button type="submit">Entrar</button>
+      </form>
+
+      <p id="login-feedback" class="note"></p>
+      <p class="note">As credenciais de acesso devem ser informadas separadamente pelo respons&aacute;vel pelo projeto.</p>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="js/admin-common.js"></script>
+  <script src="js/admin-login.js"></script>
+</body>
+</html>

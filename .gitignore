@@ -1,0 +1,13 @@
+data/*
+!data/.htaccess
+!data/.gitkeep
+!data/README.md
+!data/.gitignore
+
+tmp-*.png
+_mobile-home.png
+_tablet-home.png
+_test.txt
+
+.DS_Store
+Thumbs.db

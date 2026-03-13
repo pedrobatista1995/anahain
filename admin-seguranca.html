@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Segurança do painel</title>
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body data-admin-page="security">
+  <main class="erp-wrap">
+    <section class="admin-shell">
+      <aside class="admin-sidebar">
+        <div class="admin-brand">
+          <p class="eyebrow is-light">Painel médico</p>
+          <h1>Segurança</h1>
+          <p>Senha e acesso do painel em uma área isolada, sem competir com dados de agenda ou clínica.</p>
+        </div>
+
+        <nav class="admin-nav">
+          <span class="admin-nav-group-title">Agenda</span>
+          <a class="admin-nav-link" data-page="dashboard" href="admin-dashboard.html">Dashboard</a>
+          <a class="admin-nav-link" data-page="agenda" href="admin-agenda.html">Agenda e bloqueios</a>
+          <a class="admin-nav-link" data-page="bookings" href="admin-atendimentos.html">Atendimentos</a>
+          <a class="admin-nav-link" data-page="records" href="admin-prontuarios.html">Prontuários</a>
+          <span class="admin-nav-group-title">Gestão</span>
+          <a class="admin-nav-link" data-page="metrics" href="admin-metricas.html">Métricas</a>
+          <a class="admin-nav-link" data-page="settings" href="admin-configuracoes.html">Clínica e agenda</a>
+          <a class="admin-nav-link" data-page="notifications" href="admin-notificacoes.html">Notificações</a>
+          <a class="admin-nav-link" data-page="security" href="admin-seguranca.html">Segurança</a>
+          <a class="admin-nav-link" data-page="leads" href="leads.html">Leads</a>
+        </nav>
+
+        <div class="sidebar-summary">
+          <article class="summary-card">
+            <span>Área</span>
+            <strong>Segurança</strong>
+          </article>
+          <article class="summary-card">
+            <span>Usuário</span>
+            <strong id="sidebar-selected-day">-</strong>
+          </article>
+        </div>
+
+        <div class="sidebar-actions">
+          <button id="refresh-page" type="button">Atualizar</button>
+          <button id="logout-btn" type="button" class="ghost-btn ghost-btn-light">Sair</button>
+        </div>
+      </aside>
+
+      <section class="admin-main">
+        <header class="page-header">
+          <div>
+            <p class="eyebrow">Segurança</p>
+            <h2>Acesso do painel</h2>
+            <p class="page-description">Atualize a senha administrativa em uma tela dedicada, com menos risco de mistura com outras operações.</p>
+          </div>
+          <div class="page-toolbar">
+            <a class="ghost-btn button-link" href="admin-configuracoes.html">Voltar para configurações</a>
+          </div>
+        </header>
+
+        <section class="panel panel-narrow">
+          <div class="panel-heading">
+            <div>
+              <h3>Alterar senha</h3>
+              <p class="note">Use uma senha longa, exclusiva e com combinação de letras, números e símbolos.</p>
+            </div>
+          </div>
+
+          <form id="password-form" class="form" novalidate>
+            <label for="current-password">Senha atual</label>
+            <input id="current-password" type="password" required>
+
+            <label for="new-password">Nova senha</label>
+            <input id="new-password" type="password" required>
+
+            <button type="submit">Alterar senha</button>
+          </form>
+          <p id="password-feedback" class="note"></p>
+        </section>
+      </section>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="js/admin-common.js"></script>
+  <script src="js/admin-security-page.js"></script>
+</body>
+</html>

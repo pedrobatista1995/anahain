@@ -1,0 +1,2543 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Tricologia em Curitiba | Tratamento capilar e queda de cabelo | Dra. Ana Hain</title>
+  <meta name="description" content="Tratamento capilar em Curitiba com a Dra. Ana Hain, dermatologista com foco em tricologia clínica, queda de cabelo, afinamento capilar, cuidados capilares e saúde do couro cabeludo.">
+  <meta name="keywords" content="tricologia curitiba, tricologista curitiba, tratamento capilar curitiba, cuidados capilares curitiba, queda de cabelo curitiba, afinamento capilar curitiba, couro cabeludo curitiba, mesojectgun curitiba, dermatologista cabelo curitiba">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="author" content="Dra. Ana Hain">
+  <meta name="theme-color" content="#c9ab63">
+
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dra. Ana Hain | Tricologia em Curitiba e tratamento capilar">
+  <meta property="og:description" content="Consulta dermatológica com foco em tricologia clínica, queda de cabelo, afinamento capilar, cuidados capilares e protocolos personalizados em Curitiba.">
+  <meta property="og:image" content="assets/anahain.avif">
+  <meta property="og:image:alt" content="Dra. Ana Hain em consulta de tricologia em Curitiba">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link href="assets/img/favicon.png" rel="icon" type="image/png">
+  <link href="assets/fonts/fonts.css" rel="stylesheet">
+
+  <script src="assets/vendor/tailwindcss.js"></script>
+  <script defer src="assets/vendor/iconify.min.js"></script>
+
+  <style>
+  :root {
+    --accent: #c9ab63;
+    --text-soft: #a3a3a3;
+    --text-faint: #737373;
+    --shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
+    --whatsapp-green: #25d366;
+    --instagram-start: #f58529;
+    --instagram-mid: #dd2a7b;
+    --instagram-end: #515bd4;
+    --header-offset: 96px;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--header-offset);
+  }
+
+  body {
+    font-family: "Inter", sans-serif;
+  }
+
+  section[id],
+  footer[id],
+  div[id] {
+    scroll-margin-top: var(--header-offset);
+  }
+
+  .font-syne {
+    font-family: "Syne", sans-serif !important;
+  }
+
+  .text-huge {
+    font-size: clamp(3rem, 16vw, 24rem);
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .reveal-hidden {
+    opacity: 0;
+  }
+
+  @keyframes beam-drop {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(500%); }
+  }
+
+  .animate-beam,
+  .beam {
+    animation: beam-drop 5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    will-change: transform;
+  }
+
+  .beam-delay-1 { animation-delay: 1.5s; }
+  .beam-delay-2 { animation-delay: 3s; }
+
+  @keyframes border-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .animate-border-spin {
+    animation: border-spin 2s linear infinite;
+  }
+
+  .button-border-spin {
+    background: conic-gradient(
+      from 0deg at 50% 50%,
+      transparent 0deg,
+      transparent 300deg,
+      #c9ab63 360deg
+    );
+    animation: border-spin 2s linear infinite;
+  }
+
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .animate-marquee-infinite {
+    animation: marquee 40s linear infinite;
+  }
+
+  .animate-marquee-infinite:hover {
+    animation-play-state: paused;
+  }
+
+  .marquee-track {
+    animation: marquee 40s linear infinite;
+    will-change: transform;
+  }
+
+  .marquee-track:hover {
+    animation-play-state: paused;
+  }
+
+  @keyframes fadeInUpBlur {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+      filter: blur(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
+  }
+
+  .animate-in {
+    animation: fadeInUpBlur 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  }
+
+  @keyframes hero-title-drift {
+    0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+    50% { transform: translate3d(0, -8px, 0) scale(1.012); }
+  }
+
+  @keyframes hero-copy-drift {
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(0, -4px, 0); }
+  }
+
+  .hero-live-title,
+  .hero-live-copy {
+    will-change: transform;
+  }
+
+  .hero-live-title.is-live {
+    animation:
+      fadeInUpBlur 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) both,
+      hero-title-drift 9s ease-in-out infinite 0.9s;
+  }
+
+  .hero-live-copy.is-live {
+    animation:
+      fadeInUpBlur 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) both,
+      hero-copy-drift 9s ease-in-out infinite 1s;
+  }
+
+  .widget-shell,
+  .booking-shell,
+  .result-card,
+  .verse-shell {
+    background: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.02));
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: var(--shadow);
+  }
+
+  .widget-shell,
+  .booking-shell,
+  .verse-shell {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .widget-shell::before,
+  .booking-shell::before,
+  .verse-shell::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(180deg, rgba(255,255,255,0.07), transparent 26%);
+  }
+
+  .result-track {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    padding-bottom: 4px;
+  }
+
+  .result-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .result-card {
+    min-width: min(30rem, 82vw);
+    scroll-snap-align: start;
+  }
+
+  .result-card img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .booking-label {
+    display: block;
+    margin-bottom: 8px;
+    color: #d4d4d4;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+  }
+
+  .booking-input {
+    width: 100%;
+    min-height: 52px;
+    padding: 0 16px;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(10,10,10,0.72);
+    color: #fff;
+    outline: none;
+    transition: border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
+  }
+
+  .booking-input:focus {
+    border-color: rgba(201,171,99,0.7);
+    box-shadow: 0 0 0 1px rgba(201,171,99,0.35);
+    background: rgba(10,10,10,0.92);
+  }
+
+  .calendar-weekdays,
+  .calendar-grid,
+  .slots-list {
+    display: grid;
+    gap: 10px;
+  }
+
+  .calendar-weekdays,
+  .calendar-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .slots-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .calendar-weekdays div {
+    color: var(--text-faint);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+  }
+
+  .day-cell,
+  .slot-btn,
+  .contact-link {
+    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.03);
+    color: #e5e5e5;
+    transition: 160ms ease;
+  }
+
+  .day-cell,
+  .slot-btn {
+    min-height: 72px;
+    padding: 14px 12px;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .day-cell strong,
+  .slot-btn strong {
+    display: block;
+    font-size: 18px;
+    color: #fff;
+  }
+
+  .day-cell small {
+    display: block;
+    margin-top: 6px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--text-faint);
+  }
+
+  .day-cell:hover,
+  .slot-btn:hover,
+  .contact-link:hover {
+    transform: translateY(-1px);
+    border-color: rgba(201,171,99,0.35);
+    background: rgba(255,255,255,0.06);
+  }
+
+  .day-cell.is-selected,
+  .slot-btn.is-selected {
+    color: #000;
+    background: linear-gradient(180deg, #f1ddad, #c9ab63);
+    border-color: rgba(201,171,99,0.8);
+    box-shadow: 0 18px 38px rgba(201,171,99,0.18);
+  }
+
+  .day-cell.is-selected small,
+  .day-cell.is-selected strong,
+  .slot-btn.is-selected strong {
+    color: #111;
+  }
+
+  .calendar-empty,
+  .hint,
+  .selected-date-label {
+    color: var(--text-soft);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .booking-feedback {
+    min-height: 24px;
+    margin-top: 14px;
+    font-size: 14px;
+    color: var(--text-soft);
+  }
+
+  .booking-feedback.ok { color: #86efac; }
+  .booking-feedback.error { color: #fca5a5; }
+
+  .booking-submit[disabled] {
+    opacity: 0.45;
+    cursor: wait;
+    pointer-events: none;
+    filter: saturate(0.7);
+    transform: none !important;
+    box-shadow: none;
+  }
+
+  .media-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .media-control-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 42px;
+    min-width: 138px;
+    border-radius: 999px;
+    border: 1px solid rgba(201,171,99,0.3);
+    background: rgba(10,10,10,0.78);
+    padding: 0 16px;
+    color: #fde7b0;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.24em;
+    backdrop-filter: blur(12px);
+    transition: border-color 160ms ease, color 160ms ease, transform 160ms ease, background 160ms ease;
+  }
+
+  .media-control-btn:hover {
+    color: #fff;
+    border-color: rgba(201,171,99,0.6);
+    transform: translateY(-1px);
+  }
+
+  .verse-kicker {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(10,10,10,0.42);
+    padding: 10px 16px;
+    color: var(--text-soft);
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  .verse-title {
+    max-width: 18ch;
+    margin: 0 auto 20px;
+    color: #fff;
+    font-family: "Syne", sans-serif;
+    font-size: clamp(1.9rem, 4.8vw, 4rem);
+    line-height: 0.92;
+    letter-spacing: -0.04em;
+  }
+
+  .verse-text {
+    max-width: 20ch;
+    margin: 0 auto;
+    color: #f5f5f5;
+    font-family: "Syne", sans-serif;
+    font-size: clamp(1.6rem, 4vw, 3.2rem);
+    line-height: 1.02;
+    letter-spacing: -0.04em;
+  }
+
+  #verse-text {
+    max-width: 20ch;
+    margin: 0 auto;
+    color: #f5f5f5;
+    font-family: "Syne", sans-serif;
+    font-size: clamp(1.6rem, 4vw, 3.2rem);
+    line-height: 1.02;
+    letter-spacing: -0.04em;
+  }
+
+  .contact-grid {
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    align-items: stretch;
+  }
+
+  .contact-card,
+  .map-shell {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.08);
+    background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+    box-shadow: var(--shadow);
+  }
+
+  .contact-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 28px;
+  }
+
+  .map-shell {
+    min-height: 420px;
+  }
+
+  .map-shell::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(180deg, rgba(255,255,255,0.06), transparent 26%);
+    z-index: 2;
+  }
+
+  .map-frame {
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+    border: 0;
+    filter: saturate(1.05) contrast(1.02);
+  }
+
+  .map-overlay {
+    position: absolute;
+    inset-inline: 20px;
+    bottom: 20px;
+    z-index: 3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 16px 18px;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(10,10,10,0.76);
+    backdrop-filter: blur(14px);
+  }
+
+  .contact-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 18px 20px;
+  }
+
+  .contact-link span {
+    display: block;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--text-faint);
+  }
+
+  .contact-link strong {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .footer-brand-logo {
+    width: min(280px, 72vw);
+    height: auto;
+    object-fit: contain;
+    margin-inline: auto;
+  }
+
+  .footer-socials {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .footer-social-link {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: #d4d4d4;
+    transition: color 160ms ease, transform 160ms ease;
+  }
+
+  .footer-social-link:hover {
+    color: #fff;
+    transform: translateX(2px);
+  }
+
+  .footer-social-mark {
+    width: 42px;
+    height: 42px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 18px 34px rgba(0,0,0,0.24);
+  }
+
+  .footer-social-mark svg {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+  }
+
+  .footer-social-mark--whatsapp {
+    background: #25d366;
+  }
+
+  .footer-social-mark--instagram {
+    background: linear-gradient(135deg, #f58529, #dd2a7b, #515bd4);
+  }
+
+  .footer-social-mark--google {
+    background: linear-gradient(135deg, #4285f4, #34a853, #fbbc05, #ea4335);
+    color: #fff;
+    font-family: "Syne", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0;
+  }
+
+  .floating-actions {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 80;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .float-btn {
+    width: 56px;
+    height: 56px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 24px 50px rgba(0,0,0,0.34);
+    transition: transform 160ms ease, box-shadow 160ms ease;
+  }
+
+  .float-btn:hover { transform: translateY(-2px) scale(1.02); }
+
+  .float-btn svg {
+    width: 26px;
+    height: 26px;
+    fill: #fff;
+  }
+
+  .float-whatsapp { background: var(--whatsapp-green); }
+  .float-instagram { background: linear-gradient(135deg, var(--instagram-start), var(--instagram-mid), var(--instagram-end)); }
+
+  .section {
+    display: grid;
+    gap: 18px;
+    padding: 32px 24px;
+  }
+
+  .section-header {
+    display: grid;
+    gap: 14px;
+  }
+
+  .section-index {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-faint);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  .section-index::after {
+    content: "";
+    width: 52px;
+    height: 1px;
+    background: linear-gradient(90deg, var(--accent), transparent);
+  }
+
+  .section-title {
+    margin: 0;
+    font-family: "Syne", sans-serif;
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 0.98;
+    letter-spacing: -0.045em;
+    color: #fff;
+  }
+
+  .section-copy {
+    max-width: 820px;
+    margin: 0;
+    color: var(--text-soft);
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .widget-body {
+    position: relative;
+    padding: 22px;
+  }
+
+  .button-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .ghost-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 38px;
+    padding: 0 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.03);
+    color: var(--text-soft);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    transition: 160ms ease;
+  }
+
+  .ghost-button:hover {
+    color: #fff;
+    background: rgba(255,255,255,0.05);
+    border-color: rgba(201,171,99,0.35);
+  }
+
+  .whatsapp-cta {
+    background: #25d366;
+    color: #07140d;
+    border-color: rgba(37, 211, 102, 0.35);
+    box-shadow: 0 18px 40px rgba(37, 211, 102, 0.18);
+  }
+
+  .whatsapp-cta:hover {
+    background: #1fb85a;
+    color: #031109;
+    border-color: rgba(37, 211, 102, 0.5);
+  }
+
+  .before-after-card,
+  .proof-marquee-card,
+  .widget-shell,
+  .booking-shell,
+  .faq-item {
+    transition:
+      background-color 500ms ease,
+      border-color 500ms ease,
+      transform 500ms ease,
+      box-shadow 500ms ease;
+  }
+
+  .before-after-card:hover,
+  .proof-marquee-card:hover,
+  .widget-shell:hover,
+  .booking-shell:hover,
+  .faq-item:hover {
+    background-color: rgba(255, 255, 255, 0.02);
+  }
+
+  .faq-list details {
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding: 24px 32px;
+  }
+
+  .faq-list summary {
+    list-style: none;
+    cursor: pointer;
+    font-family: "Syne", sans-serif;
+    color: #fff;
+    font-size: 22px;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .faq-list summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-list summary::after {
+    content: "+";
+    color: var(--accent);
+    font-size: 22px;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  .faq-list details[open] summary::after {
+    content: "−";
+  }
+
+  .faq-list details p {
+    margin-top: 16px;
+    color: var(--text-soft);
+    font-size: 15px;
+    line-height: 1.8;
+    max-width: 68ch;
+  }
+
+  [data-split] .split-word-wrap {
+    display: inline-flex;
+    overflow: hidden;
+    vertical-align: bottom;
+    margin-right: 0.18em;
+    padding-bottom: 0.06em;
+  }
+
+  [data-split] .split-word-wrap:last-child {
+    margin-right: 0;
+  }
+
+  [data-split] .split-word {
+    display: inline-block;
+    transform: translate3d(0, 112%, 0);
+    opacity: 0;
+    filter: blur(12px);
+    transition:
+      transform 760ms cubic-bezier(0.2, 0.8, 0.2, 1),
+      opacity 760ms cubic-bezier(0.2, 0.8, 0.2, 1),
+      filter 760ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  [data-split].is-visible .split-word {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    filter: blur(0);
+  }
+
+  @media (max-width: 860px) {
+    :root { --header-offset: 84px; }
+
+    .slots-list,
+    .calendar-grid,
+    .calendar-weekdays {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .floating-actions {
+      right: 14px;
+      bottom: 14px;
+    }
+
+    .float-btn {
+      width: 52px;
+      height: 52px;
+    }
+
+    .text-huge {
+      font-size: clamp(2.4rem, 10.2vw, 3.2rem);
+    }
+
+    .result-track { gap: 16px; }
+
+    .result-card { min-width: 84vw; }
+
+    .result-card img { height: 260px; }
+
+    .section { padding: 24px 16px; }
+
+    .widget-body { padding: 16px; }
+
+    .contact-link { padding: 16px; }
+
+    .faq-list details { padding: 20px 16px; }
+    .faq-list summary { font-size: 18px; }
+
+    .media-controls {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .media-control-btn {
+      width: 100%;
+      min-width: 0;
+      min-height: 34px;
+      padding: 0 10px;
+      font-size: 8px;
+      letter-spacing: 0.15em;
+    }
+
+    .verse-title {
+      margin-bottom: 16px;
+      font-size: clamp(1.6rem, 8vw, 2.3rem);
+    }
+
+    .verse-text {
+      font-size: clamp(1.35rem, 6.5vw, 2rem);
+      line-height: 1.08;
+    }
+
+    #verse-text {
+      font-size: clamp(1.35rem, 6.5vw, 2rem);
+      line-height: 1.08;
+    }
+
+    .contact-grid {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .contact-card,
+    .map-shell {
+      min-height: 0;
+    }
+
+    .map-frame {
+      min-height: 320px;
+    }
+
+    .footer-socials {
+      gap: 12px;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .media-control-btn {
+      min-height: 32px;
+      font-size: 7.5px;
+      letter-spacing: 0.12em;
+    }
+  }
+
+  @media (max-width: 1100px) {
+    #tratamentos > div,
+    #sobre > div,
+    #agenda > div,
+    #faq > div {
+      grid-template-columns: minmax(0, 1fr) !important;
+    }
+
+    #tratamentos .md\:col-span-3,
+    #sobre .md\:col-span-3,
+    #agenda .md\:col-span-3,
+    #faq .md\:col-span-3,
+    #tratamentos .md\:col-span-8,
+    #sobre .md\:col-span-8,
+    #agenda .md\:col-span-8 {
+      grid-column: span 1 / span 1 !important;
+    }
+
+    #tratamentos .md\:col-span-1,
+    #sobre .md\:col-span-1,
+    #agenda .md\:col-span-1,
+    #faq .md\:col-span-1,
+    #tratamentos .md\:col-span-4,
+    #sobre .md\:col-span-4,
+    #agenda .md\:col-span-4 {
+      grid-column: span 1 / span 1 !important;
+    }
+
+    #tratamentos .divide-x > :not([hidden]) ~ :not([hidden]),
+    #sobre .divide-x > :not([hidden]) ~ :not([hidden]),
+    #agenda .divide-x > :not([hidden]) ~ :not([hidden]),
+    #faq .divide-x > :not([hidden]) ~ :not([hidden]) {
+      border-left-width: 0 !important;
+    }
+
+    #tratamentos h2[data-split],
+    #agenda h3[data-split],
+    #sobre h2[data-split] {
+      font-size: clamp(2rem, 7vw, 3.4rem) !important;
+      line-height: 0.92;
+    }
+
+    #faq .md\:col-span-1 {
+      min-height: 0 !important;
+      height: auto !important;
+      padding: 24px 16px 8px !important;
+      justify-content: flex-start !important;
+    }
+
+    #faq .md\:col-span-1 p[data-reveal] {
+      margin-bottom: 0 !important;
+    }
+
+    #hero .text-huge {
+      font-size: clamp(3rem, 13vw, 7rem);
+    }
+  }
+  </style>
+</head>
+<body class="bg-neutral-950 text-neutral-200 overflow-x-hidden w-full min-h-screen relative selection:bg-amber-300/30 selection:text-white pt-20 md:pt-24">
+
+  <header class="fixed top-0 left-0 w-full z-50 bg-neutral-950/80 backdrop-blur-md border-b border-white/10 h-20 md:h-24 transition-all duration-300" id="header">
+    <div class="flex md:px-8 w-full h-full max-w-[1920px] mr-auto ml-auto pr-6 pl-6 items-center justify-between">
+      <a class="flex items-center gap-3 group" href="#hero" data-reveal>
+        <img src="assets/img/logotipodermatologista.svg" alt="Logotipo Dra. Ana Hain" class="h-14 sm:h-16 md:h-20 lg:h-24 w-auto object-contain">
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-8">
+        <a class="text-[10px] hover:text-white transition-colors uppercase font-bold text-neutral-400 tracking-[0.2em]" href="#tratamentos">Tratamentos</a>
+        <a class="text-[10px] hover:text-white transition-colors uppercase font-bold text-neutral-400 tracking-[0.2em]" href="#resultados">Resultados</a>
+        <a class="text-[10px] hover:text-white transition-colors uppercase font-bold text-neutral-400 tracking-[0.2em]" href="#reviews">Avaliações</a>
+        <a class="text-[10px] hover:text-white transition-colors uppercase font-bold text-neutral-400 tracking-[0.2em]" href="#instagram">Instagram</a>
+        <a class="text-[10px] hover:text-white transition-colors uppercase font-bold text-neutral-400 tracking-[0.2em]" href="#agenda">Agendar Consulta</a>
+        <a class="text-[10px] hover:text-white transition-colors uppercase font-bold text-neutral-400 tracking-[0.2em]" href="#contato">Contato</a>
+      </nav>
+
+      <div class="flex items-center gap-3 md:gap-4">
+        <a class="hidden lg:flex items-center gap-2 text-[10px] transition-colors uppercase font-bold tracking-widest rounded-sm bg-amber-300/10 border border-amber-300/30 text-amber-200 pt-2.5 pr-5 pb-2.5 pl-5 hover:bg-amber-300/15 hover:text-white" href="admin.html">
+          <iconify-icon height="16" icon="solar:user-id-linear" width="16"></iconify-icon>
+          <span>Área do médico</span>
+        </a>
+
+        <a class="hidden md:flex items-center gap-2 text-[10px] transition-colors uppercase font-bold tracking-widest rounded-sm pt-2.5 pr-6 pb-2.5 pl-6 whatsapp-cta" href="#" id="public-whatsapp" target="_blank" rel="noopener" data-track-event="click_whatsapp">
+          <svg aria-hidden="true" class="shrink-0" fill="currentColor" height="14" viewBox="0 0 24 24" width="14"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.62 2 2.2 6.41 2.2 11.84c0 1.74.45 3.43 1.31 4.92L2 22l5.4-1.42a9.8 9.8 0 0 0 4.64 1.18h.01c5.42 0 9.84-4.42 9.84-9.85a9.78 9.78 0 0 0-2.84-7Zm-7.01 15.19h-.01a8.15 8.15 0 0 1-4.15-1.14l-.3-.18-3.2.84.85-3.12-.2-.32a8.17 8.17 0 0 1-1.26-4.34c0-4.51 3.67-8.18 8.19-8.18 2.18 0 4.22.85 5.76 2.4a8.1 8.1 0 0 1 2.39 5.77c0 4.51-3.67 8.18-8.07 8.18Zm4.48-6.1c-.24-.12-1.4-.7-1.62-.77-.22-.08-.38-.12-.54.12-.16.24-.61.77-.75.93-.14.16-.28.18-.52.06-.24-.12-1.03-.38-1.95-1.23-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.36.1-.48.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.48-.4-.42-.54-.43h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2 0 1.18.86 2.32.98 2.48.12.16 1.68 2.57 4.07 3.6.57.25 1.02.4 1.37.52.58.18 1.1.15 1.52.09.46-.07 1.4-.57 1.6-1.12.2-.55.2-1.01.14-1.11-.06-.1-.22-.16-.46-.28Z"></path></svg>
+          <span>Agendar avaliação</span>
+        </a>
+
+        <div class="lg:hidden relative">
+          <button aria-controls="mobile-menu-panel" aria-expanded="false" class="inline-flex items-center gap-2 rounded-full border border-amber-300/20 bg-neutral-950/80 px-3 py-2 text-amber-200 shadow-[0_0_28px_-14px_rgba(201,171,99,0.75)] transition-colors hover:border-amber-300/40 hover:text-white" id="mobile-menu-button" type="button">
+            <span class="text-[10px] uppercase tracking-[0.24em]">Menu</span>
+            <iconify-icon height="18" icon="solar:hamburger-menu-linear" width="18"></iconify-icon>
+          </button>
+
+          <div class="hidden absolute top-full right-0 mt-4 w-[280px] max-w-[calc(100vw-32px)] bg-neutral-900/95 border border-white/10 rounded-xl p-3 flex-col gap-2 shadow-2xl backdrop-blur-xl" id="mobile-menu-panel">
+            <div class="grid grid-cols-1 gap-2 pb-2 border-b border-white/10">
+              <a class="flex items-center justify-center gap-2 rounded-md bg-[#0c1d12] border border-[#25d366]/35 text-[#ecfff4] px-4 py-3 text-[10px] uppercase font-bold tracking-[0.2em]" href="#" id="public-whatsapp-mobile" target="_blank" rel="noopener" data-track-event="click_whatsapp">
+                <svg aria-hidden="true" class="shrink-0" fill="currentColor" height="14" viewBox="0 0 24 24" width="14"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.62 2 2.2 6.41 2.2 11.84c0 1.74.45 3.43 1.31 4.92L2 22l5.4-1.42a9.8 9.8 0 0 0 4.64 1.18h.01c5.42 0 9.84-4.42 9.84-9.85a9.78 9.78 0 0 0-2.84-7Zm-7.01 15.19h-.01a8.15 8.15 0 0 1-4.15-1.14l-.3-.18-3.2.84.85-3.12-.2-.32a8.17 8.17 0 0 1-1.26-4.34c0-4.51 3.67-8.18 8.19-8.18 2.18 0 4.22.85 5.76 2.4a8.1 8.1 0 0 1 2.39 5.77c0 4.51-3.67 8.18-8.07 8.18Zm4.48-6.1c-.24-.12-1.4-.7-1.62-.77-.22-.08-.38-.12-.54.12-.16.24-.61.77-.75.93-.14.16-.28.18-.52.06-.24-.12-1.03-.38-1.95-1.23-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.36.1-.48.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.48-.4-.42-.54-.43h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2 0 1.18.86 2.32.98 2.48.12.16 1.68 2.57 4.07 3.6.57.25 1.02.4 1.37.52.58.18 1.1.15 1.52.09.46-.07 1.4-.57 1.6-1.12.2-.55.2-1.01.14-1.11-.06-.1-.22-.16-.46-.28Z"></path></svg>
+                <span>Agendar avaliação</span>
+              </a>
+
+              <a class="flex items-center justify-center gap-2 rounded-md bg-amber-300/10 border border-amber-300/30 text-amber-200 px-4 py-3 text-[10px] uppercase font-bold tracking-[0.2em]" href="admin.html">
+                <iconify-icon height="16" icon="solar:user-id-linear" width="16"></iconify-icon>
+                <span>Área do médico</span>
+              </a>
+            </div>
+
+            <a class="block px-4 py-3 text-sm text-neutral-300 hover:text-white hover:bg-white/5 rounded-md" href="#tratamentos">Tratamentos</a>
+            <a class="block px-4 py-3 text-sm text-neutral-300 hover:text-white hover:bg-white/5 rounded-md" href="#resultados">Resultados</a>
+            <a class="block px-4 py-3 text-sm text-neutral-300 hover:text-white hover:bg-white/5 rounded-md" href="#reviews">Avaliações</a>
+            <a class="block px-4 py-3 text-sm text-neutral-300 hover:text-white hover:bg-white/5 rounded-md" href="#instagram">Instagram</a>
+            <a class="block px-4 py-3 text-sm text-neutral-300 hover:text-white hover:bg-white/5 rounded-md" href="#agenda">Agendar Consulta</a>
+            <a class="block px-4 py-3 text-sm text-neutral-300 hover:text-white hover:bg-white/5 rounded-md" href="#versiculo">Versículo</a>
+            <a class="block px-4 py-3 text-sm text-neutral-300 hover:text-white hover:bg-white/5 rounded-md" href="#contato">Contato</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="fixed inset-0 -z-10 brightness-125 saturate-200">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_14%_20%,rgba(201,171,99,0.14),transparent_22%)]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_80%_18%,rgba(201,171,99,0.12),transparent_28%)]"></div>
+    <div class="absolute inset-0 bg-[linear-gradient(180deg,#060606_0%,#090909_38%,#050505_100%)]"></div>
+  </div>
+
+  <main class="w-full">
+    <section class="overflow-hidden bg-neutral-950 w-full border-white/10 border-b relative" id="hero">
+      <div class="absolute inset-0 z-0 overflow-hidden">
+        <video autoplay muted loop playsinline poster="assets/img/hero-video-poster.jpg" class="absolute inset-0 h-full w-full object-cover">
+          <source src="assets/video/tratamentocapilar840x2160.mp4" type="video/mp4">
+          <source src="assets/video/tratamentocapilar840x2160.mov" type="video/quicktime">
+        </video>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(201,171,99,0.1),transparent_38%)] mix-blend-screen opacity-100"></div>
+        <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(5,5,6,0.28)_0%,rgba(5,5,6,0.44)_28%,rgba(5,5,6,0.86)_100%)]"></div>
+        <div class="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,5,6,0.78)_0%,rgba(5,5,6,0.18)_18%,rgba(5,5,6,0.18)_82%,rgba(5,5,6,0.78)_100%)]"></div>
+        <div class="absolute inset-0 opacity-[0.08] bg-[linear-gradient(0deg,transparent_0%,rgba(201,171,99,0.55)_50%,transparent_100%)]"></div>
+      </div>
+
+      <div class="absolute inset-0 z-10 w-full h-full pointer-events-none border-t border-white/10"></div>
+
+      <div class="absolute inset-0 w-full h-full grid grid-cols-1 md:grid-cols-4 pointer-events-none z-30">
+        <div class="border-r border-white/10 h-full hidden md:block relative">
+          <div class="absolute right-0 top-0 h-full w-[1px] overflow-hidden">
+            <div class="beam absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-transparent via-amber-300 to-transparent opacity-90"></div>
+          </div>
+          <div class="absolute -right-[5px] -top-[5px] text-white/30 text-xs hidden md:block">+</div>
+        </div>
+        <div class="border-r border-white/10 h-full hidden md:block relative">
+          <div class="absolute right-0 top-0 h-full w-[1px] overflow-hidden">
+            <div class="beam beam-delay-1 absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-transparent via-amber-300 to-transparent opacity-90"></div>
+          </div>
+          <div class="absolute -right-[5px] -top-[5px] text-white/30 text-xs hidden md:block">+</div>
+        </div>
+        <div class="border-r border-white/10 h-full hidden md:block relative">
+          <div class="absolute right-0 top-0 h-full w-[1px] overflow-hidden">
+            <div class="beam beam-delay-2 absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-transparent via-amber-300 to-transparent opacity-90"></div>
+          </div>
+          <div class="absolute -right-[5px] -top-[5px] text-white/30 text-xs hidden md:block">+</div>
+        </div>
+        <div class="hidden md:block"></div>
+      </div>
+
+      <div class="relative z-20 grid grid-cols-1 md:grid-cols-4 w-full min-h-[680px] md:h-[760px] md:max-h-[760px]">
+        <div class="hidden md:flex flex-col md:p-8 md:border-b-0 group border-white/10 border-b pt-6 pr-6 pb-6 pl-6 relative justify-between" data-reveal>
+          <div class="absolute right-0 top-0 h-full w-[1px] bg-white/10 hidden md:block overflow-hidden">
+            <div class="beam absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-transparent via-amber-300 to-transparent opacity-75"></div>
+          </div>
+          <div class="absolute -right-[5px] -top-[5px] text-white/30 text-xs hidden md:block z-20">+</div>
+        </div>
+
+        <div class="hidden md:flex flex-col md:p-8 md:border-b-0 group border-white/10 border-b pt-6 pr-6 pb-6 pl-6 relative justify-between" data-reveal>
+          <div class="absolute right-0 top-0 h-full w-[1px] bg-white/10 hidden md:block overflow-hidden">
+            <div class="beam beam-delay-1 absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-transparent via-amber-300 to-transparent opacity-75"></div>
+          </div>
+          <div class="absolute -right-[5px] -top-[5px] text-white/30 text-xs hidden md:block z-20">+</div>
+        </div>
+
+        <div class="absolute top-1/2 md:top-[48%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center z-20 pointer-events-none px-4">
+          <div class="mb-5" data-reveal>
+            <span class="inline-flex text-[10px] md:text-xs uppercase tracking-[0.3em] text-neutral-500 border border-white/10 px-4 py-2 bg-neutral-950/40">Dra. Ana Hain | CRM: 25987 | RQE: 33405</span>
+          </div>
+
+          <h1 class="text-huge leading-none text-white tracking-tighter mix-blend-overlay opacity-90 font-syne font-medium hero-live-title" id="hero-title" data-split>
+            TRICOLOGIA
+          </h1>
+
+          <p class="max-w-3xl mx-auto mt-4 text-sm md:text-lg text-neutral-300 leading-relaxed hero-live-copy" id="hero-subtitle" data-reveal data-reveal-delay="1">
+            Avaliação completa da saúde capilar com atendimento dedicado — porque um bom diagnóstico exige tempo, não pressa.
+          </p>
+
+          <div class="mt-6 md:mt-10 flex justify-center pointer-events-auto">
+            <a class="relative group cursor-pointer" href="#" id="public-whatsapp-hero" target="_blank" rel="noopener" data-track-event="click_whatsapp" data-reveal data-reveal-delay="2">
+              <div class="absolute -inset-[1px] rounded-md button-border-spin opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-[0.5px]"></div>
+              <div class="relative bg-[#0c1d12] border border-[#25d366]/35 text-[#ecfff4] px-5 py-2.5 rounded-md flex items-center gap-3 shadow-lg shadow-[#25d366]/15 h-full w-full group-hover:text-white group-hover:border-[#25d366]/60 transition-all duration-300">
+                <svg aria-hidden="true" class="shrink-0 text-[#9ee2ba] group-hover:text-white transition-colors duration-300" fill="currentColor" height="18" viewBox="0 0 24 24" width="18"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.62 2 2.2 6.41 2.2 11.84c0 1.74.45 3.43 1.31 4.92L2 22l5.4-1.42a9.8 9.8 0 0 0 4.64 1.18h.01c5.42 0 9.84-4.42 9.84-9.85a9.78 9.78 0 0 0-2.84-7Zm-7.01 15.19h-.01a8.15 8.15 0 0 1-4.15-1.14l-.3-.18-3.2.84.85-3.12-.2-.32a8.17 8.17 0 0 1-1.26-4.34c0-4.51 3.67-8.18 8.19-8.18 2.18 0 4.22.85 5.76 2.4a8.1 8.1 0 0 1 2.39 5.77c0 4.51-3.67 8.18-8.07 8.18Zm4.48-6.1c-.24-.12-1.4-.7-1.62-.77-.22-.08-.38-.12-.54.12-.16.24-.61.77-.75.93-.14.16-.28.18-.52.06-.24-.12-1.03-.38-1.95-1.23-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.36.1-.48.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.48-.4-.42-.54-.43h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2 0 1.18.86 2.32.98 2.48.12.16 1.68 2.57 4.07 3.6.57.25 1.02.4 1.37.52.58.18 1.1.15 1.52.09.46-.07 1.4-.57 1.6-1.12.2-.55.2-1.01.14-1.11-.06-.1-.22-.16-.46-.28Z"></path></svg>
+                <span class="text-sm font-medium tracking-[0.2em] uppercase">Agendar avaliação</span>
+                <iconify-icon class="text-[#9ee2ba] group-hover:text-white group-hover:translate-x-1 transition-all duration-300" height="18" icon="solar:arrow-right-up-linear" width="18"></iconify-icon>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="z-20 overflow-hidden bg-neutral-950 w-full border-white/10 border-t relative">
+      <div class="absolute inset-0 w-full h-full grid grid-cols-1 md:grid-cols-4 pointer-events-none z-10">
+        <div class="border-r border-white/10 h-full hidden md:block relative"><div class="absolute -right-[5px] -top-[5px] text-white/30 text-xs hidden md:block">+</div></div>
+        <div class="border-r border-white/10 h-full hidden md:block relative"><div class="absolute -right-[5px] -top-[5px] text-white/30 text-xs hidden md:block">+</div></div>
+        <div class="border-r border-white/10 h-full hidden md:block relative"><div class="absolute -right-[5px] -top-[5px] text-white/30 text-xs hidden md:block">+</div></div>
+        <div class="hidden md:block"></div>
+      </div>
+
+      <div class="flex z-0 overflow-hidden pt-10 pb-10 relative items-center">
+        <div class="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-neutral-950 to-transparent z-10 pointer-events-none"></div>
+        <div class="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-neutral-950 to-transparent z-10 pointer-events-none"></div>
+
+        <div class="marquee-track flex gap-20 whitespace-nowrap min-w-full">
+          <div class="flex items-center gap-20 shrink-0">
+            <div class="flex items-center gap-3 opacity-40 hover:opacity-100 transition-opacity duration-300"><iconify-icon height="28" icon="solar:heart-pulse-linear" width="28"></iconify-icon><span class="text-lg font-semibold text-white tracking-tight font-syne">TRICOLOGIA</span></div>
+            <div class="flex items-center gap-3 opacity-40 hover:opacity-100 transition-opacity duration-300"><iconify-icon height="28" icon="solar:stethoscope-linear" width="28"></iconify-icon><span class="text-lg font-semibold tracking-tight text-white font-syne">CUIDADO E TRATAMENTO CAPILAR</span></div>
+            <div class="flex items-center gap-3 opacity-40 hover:opacity-100 transition-opacity duration-300"><iconify-icon height="28" icon="solar:star-line-duotone" width="28"></iconify-icon><span class="text-lg font-semibold tracking-tight text-white font-syne">TERAPIA CAPILAR</span></div>
+            <div class="flex items-center gap-3 opacity-40 hover:opacity-100 transition-opacity duration-300"><iconify-icon height="28" icon="solar:shield-check-linear" width="28"></iconify-icon><span class="text-lg font-semibold tracking-tight text-white font-syne">DIAGNÓSTICO COM PRECISÃO</span></div>
+            <div class="flex items-center gap-3 opacity-40 hover:opacity-100 transition-opacity duration-300"><iconify-icon height="28" icon="solar:health-linear" width="28"></iconify-icon><span class="text-lg font-semibold tracking-tight text-white font-syne">MESOJECTGUN</span></div>
+            <div class="flex items-center gap-3 opacity-40 hover:opacity-100 transition-opacity duration-300"><iconify-icon height="28" icon="solar:map-point-linear" width="28"></iconify-icon><span class="text-lg font-semibold tracking-tight text-white font-syne">CUIDADO INDIVIDUALIZADO</span></div>
+          </div>
+
+          <div class="flex items-center gap-20 shrink-0">
+            <div class="flex items-center gap-3 opacity-40 hover:opacity-100 transition-opacity duration-300"><iconify-icon height="28" icon="solar:heart-pulse-linear" width="28"></iconify-icon><span class="text-lg font-semibold text-white tracking-tight font-syne">TRICOLOGIA</span></div>
+            <div class="flex items-center gap-3 opacity-40 hover:opacity-100 transition-opacity duration-300"><iconify-icon height="28" icon="solar:stethoscope-linear" width="28"></iconify-icon><span class="text-lg font-semibold tracking-tight text-white font-syne">CUIDADO E TRATAMENTO CAPILAR</span></div>
+            <div class="flex items-center gap-3 opacity-40 hover:opacity-100 transition-opacity duration-300"><iconify-icon height="28" icon="solar:star-line-duotone" width="28"></iconify-icon><span class="text-lg font-semibold tracking-tight text-white font-syne">TERAPIA CAPILAR</span></div>
+            <div class="flex items-center gap-3 opacity-40 hover:opacity-100 transition-opacity duration-300"><iconify-icon height="28" icon="solar:shield-check-linear" width="28"></iconify-icon><span class="text-lg font-semibold tracking-tight text-white font-syne">DIAGNÓSTICO COM PRECISÃO</span></div>
+            <div class="flex items-center gap-3 opacity-40 hover:opacity-100 transition-opacity duration-300"><iconify-icon height="28" icon="solar:health-linear" width="28"></iconify-icon><span class="text-lg font-semibold tracking-tight text-white font-syne">MESOJECTGUN</span></div>
+            <div class="flex items-center gap-3 opacity-40 hover:opacity-100 transition-opacity duration-300"><iconify-icon height="28" icon="solar:map-point-linear" width="28"></iconify-icon><span class="text-lg font-semibold tracking-tight text-white font-syne">CUIDADO INDIVIDUALIZADO</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="z-20 bg-neutral-950 w-full border-white/10 border-t relative" id="tratamentos">
+      <div class="grid grid-cols-1 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-white/10">
+        <div class="md:col-span-1 flex flex-col p-8 justify-between min-h-[320px] md:min-h-full">
+          <div class="flex flex-col gap-3">
+            <span class="block text-xs text-neutral-600 font-mono mb-2">/// Tratamentos</span>
+            <p class="text-[10px] uppercase tracking-[0.28em] text-amber-300" data-reveal>Novidade na clínica</p>
+            <h2 class="leading-[0.8] text-7xl font-medium text-white tracking-tighter font-syne" data-split>MesojectGun sem agulhas em Curitiba...</h2>
+            <p class="text-neutral-400 text-sm leading-relaxed" data-reveal>A clínica agora conta com uma tecnologia de alta qualidade para tratamento capilar, infusão de ativos no couro cabeludo e protocolos de cuidados capilares com mais conforto, segurança e precisão.</p>
+            <blockquote class="border-l border-amber-300 pl-4 text-sm italic leading-relaxed text-neutral-300" data-reveal>"Um procedimento confortável, seguro e com resposta visível desde as primeiras sessões."</blockquote>
+            <p class="text-neutral-500 text-sm leading-relaxed" data-reveal>Seu protocolo começa com avaliação médica e indicação personalizada.</p>
+          </div>
+
+          <div class="relative group cursor-pointer w-max mt-8" data-reveal>
+            <div class="absolute -inset-[1px] rounded-md button-border-spin opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-[0.5px]"></div>
+
+          </div>
+        </div>
+
+        <div class="md:col-span-3 group flex flex-col hover:bg-white/[0.02] transition-colors duration-500 p-8 md:p-10 relative" data-reveal>
+          <div class="aspect-video overflow-hidden flex flex-col bg-neutral-900/40 w-full border border-white/10 rounded-none mb-8 relative items-center justify-center">
+            <video autoplay class="absolute inset-0 h-full w-full object-cover" id="mesoject-video" loop muted playsinline preload="auto">
+              <source src="assets/video/tkn.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(5,5,6,0.12)_0%,rgba(5,5,6,0.62)_100%)]"></div>
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(201,171,99,0.22),transparent_58%)] mix-blend-screen"></div>
+            <div class="absolute inset-0 ring-1 ring-white/10"></div>
+            <div class="absolute top-5 left-5 z-20"><div class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-amber-300"></span><span class="font-mono text-[10px] uppercase tracking-[0.32em] text-neutral-300">mesojectgun</span></div></div>
+            <div class="absolute inset-x-5 bottom-5 z-20 media-controls">
+              <button class="media-control-btn" id="mesoject-sound-toggle" type="button">
+                <span id="mesoject-sound-label">Ativar som</span>
+              </button>
+              <button class="media-control-btn" id="mesoject-play-toggle" type="button">
+                <span id="mesoject-play-label">Pausar</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="grid gap-6 md:grid-cols-[1.2fr_0.8fr] md:items-end">
+            <div>
+              <h3 class="text-2xl md:text-4xl text-white font-medium tracking-tighter font-syne mb-4" data-split>Tratamento capilar</h3>
+              <p class="text-neutral-400 text-sm md:text-base leading-relaxed max-w-3xl" data-reveal>Quando usado para terapia capilar, aplica com precisão minoxidil, fatores de crescimento e aminoácidos diretamente no couro cabeludo, com resultados que incluem aumento de até 27% na densidade capilar após ciclo completo em pacientes com alopecia androgenética em estágio inicial. Proporciona fortalecimento dos folículos capilares, redução da queda de cabelo, estímulo ao crescimento de novos fios, e couro cabeludo saudável e hidratado.</p>
+            </div>
+            <div class="flex flex-wrap gap-3 md:justify-end">
+              <span class="text-[10px] uppercase tracking-[0.2em] text-neutral-300 border border-white/10 px-3 py-2" data-reveal>sem agulhas</span>
+              <span class="text-[10px] uppercase tracking-[0.2em] text-neutral-300 border border-white/10 px-3 py-2" data-reveal>alta tecnologia</span>
+              <span class="text-[10px] uppercase tracking-[0.2em] text-neutral-300 border border-white/10 px-3 py-2" data-reveal>conforto e precisão</span>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <section class="overflow-hidden bg-neutral-950 w-full border-white/10 border-t relative">
+      <div class="absolute inset-0 w-full h-full grid grid-cols-1 md:grid-cols-4 pointer-events-none">
+        <div class="border-r border-white/10 h-full hidden md:block relative"><div class="absolute -right-[5px] -top-[5px] text-white/30 text-xs hidden md:block">+</div></div>
+        <div class="border-r border-white/10 h-full hidden md:block relative"><div class="absolute -right-[5px] -top-[5px] text-white/30 text-xs hidden md:block">+</div></div>
+        <div class="border-r border-white/10 h-full hidden md:block relative"><div class="absolute -right-[5px] -top-[5px] text-white/30 text-xs hidden md:block">+</div></div>
+        <div class="hidden md:block"></div>
+      </div>
+      <div class="z-10 grid grid-cols-1 md:grid-cols-4 w-full relative">
+        <div class="hidden md:block bg-[url(assets/img/grok-image-ac8cd76b-01d0-4c5c-82a9-429864a7230b.png)] bg-cover bg-center"></div>
+        <div class="md:col-span-3 flex items-center py-16 md:py-32 pl-6 pr-6 md:pl-8">
+          <h2 class="md:text-7xl lg:text-9xl leading-none text-4xl sm:text-5xl font-medium text-white tracking-tighter font-syne" id="resultados" data-split>Resultados reais, acompanhados com critério.</h2>
+        </div>
+      </div>
+    </section>
+
+    <section class="z-20 bg-neutral-950 w-full border-white/10 border-t relative">
+      <div class="grid grid-cols-1 md:grid-cols-12 divide-y md:divide-y-0 md:divide-x divide-white/10">
+        <div class="md:col-span-3 flex flex-col lg:p-12 z-30 bg-neutral-950 pt-8 pr-8 pb-8 pl-8 justify-between">
+          <div>
+            <span class="block text-xs text-neutral-600 font-mono mb-4">/// Resultados</span>
+            <h2 class="text-3xl font-medium text-white tracking-tight font-syne mb-4" data-split>Casos reais</h2>
+            <p class="text-neutral-400 text-sm leading-relaxed mb-8" data-reveal>Acompanhe casos reais de nossos pacientes.</p>
+          </div>
+          <div class="mt-12 space-y-4">
+            <div class="flex items-center gap-4 border-t border-white/5 pt-6">
+              <span class="text-2xl font-syne text-white">antes &amp; depois</span>
+              <span class="text-[9px] font-mono text-neutral-600 uppercase tracking-widest leading-tight">toque ou clique<br>para expandir</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="md:col-span-9 flex bg-neutral-950 relative items-center overflow-hidden">
+          <div class="absolute left-0 top-0 bottom-0 w-24 z-20 bg-gradient-to-r from-neutral-950 to-transparent pointer-events-none"></div>
+          <div class="absolute right-0 top-0 bottom-0 w-24 z-20 bg-gradient-to-l from-neutral-950 to-transparent pointer-events-none"></div>
+
+          <div class="flex w-full min-h-[460px] lg:h-[560px] overflow-x-auto lg:overflow-hidden no-scrollbar snap-x snap-mandatory" id="before-after-container">
+            <article class="before-after-card active flex-1 lg:flex-[3] min-w-[78vw] sm:min-w-[62vw] lg:min-w-0 overflow-hidden cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group border-b lg:border-b-0 lg:border-r border-white/10 relative snap-center" data-result-card tabindex="0" role="button" aria-pressed="true" data-reveal>
+              <img class="transition-all duration-700 group-[.active]:scale-110 w-full h-full object-cover absolute inset-0 scale-105 grayscale group-[.active]:grayscale-0" src="assets/img/antesxdepois/resultados-pacientes-recupere-tricologia-12.webp" alt="Antes e depois de queda de cabelo acompanhada em tricologia clínica">
+              <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/45 to-transparent opacity-95 group-[.active]:opacity-80 transition-opacity duration-700"></div>
+              <div class="absolute inset-x-0 bottom-0 p-6 md:p-8 z-20">
+                <span class="block text-[9px] font-mono text-amber-300 mb-2 tracking-widest opacity-0 group-[.active]:opacity-100 transition-opacity uppercase">01 // Queda difusa</span>
+                <h3 class="text-2xl text-white font-medium uppercase tracking-tighter">Redução da queda</h3>
+                <div class="grid grid-rows-[0fr] group-[.active]:grid-rows-[1fr] transition-[grid-template-rows] duration-700">
+                  <div class="overflow-hidden">
+                    <p class="text-neutral-400 text-xs mt-4 max-w-xs">Avaliação precoce, investigação da causa e protocolo capilar individualizado para recuperar densidade e segurança no tratamento.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="before-after-card flex-1 lg:flex-1 min-w-[78vw] sm:min-w-[62vw] lg:min-w-0 overflow-hidden cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group border-b lg:border-b-0 lg:border-r border-white/10 relative snap-center" data-result-card tabindex="0" role="button" aria-pressed="false" data-reveal>
+              <img class="transition-all duration-700 w-full h-full object-cover absolute inset-0 scale-105 grayscale group-[.active]:grayscale-0 group-[.active]:scale-110" src="assets/img/antesxdepois/resultados-pacientes-recupere-tricologia-13.webp" alt="Caso de afinamento capilar acompanhado em Curitiba">
+              <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/45 to-transparent opacity-95 group-[.active]:opacity-80 transition-opacity duration-700"></div>
+              <div class="absolute inset-x-0 bottom-0 p-6 md:p-8 z-20">
+                <span class="block text-[9px] font-mono text-amber-300 mb-2 tracking-widest opacity-0 group-[.active]:opacity-100 transition-opacity uppercase">02 // Afinamento</span>
+                <h3 class="text-2xl text-white font-medium uppercase tracking-tighter">Mais espessura</h3>
+                <div class="grid grid-rows-[0fr] group-[.active]:grid-rows-[1fr] transition-[grid-template-rows] duration-700">
+                  <div class="overflow-hidden">
+                    <p class="text-neutral-400 text-xs mt-4 max-w-xs">Quando o fio perde volume, o cuidado capilar precisa de estratégia, constância e tecnologia alinhadas ao quadro clínico.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="before-after-card flex-1 lg:flex-1 min-w-[78vw] sm:min-w-[62vw] lg:min-w-0 overflow-hidden cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group border-b lg:border-b-0 lg:border-r border-white/10 relative snap-center" data-result-card tabindex="0" role="button" aria-pressed="false" data-reveal>
+              <img class="transition-all duration-700 w-full h-full object-cover absolute inset-0 scale-105 grayscale group-[.active]:grayscale-0 group-[.active]:scale-110" src="assets/img/antesxdepois/resultados-pacientes-recupere-tricologia-15.webp" alt="Tratamento capilar com diagnóstico dermatológico em Curitiba">
+              <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/45 to-transparent opacity-95 group-[.active]:opacity-80 transition-opacity duration-700"></div>
+              <div class="absolute inset-x-0 bottom-0 p-6 md:p-8 z-20">
+                <span class="block text-[9px] font-mono text-amber-300 mb-2 tracking-widest opacity-0 group-[.active]:opacity-100 transition-opacity uppercase">03 // Diagnóstico</span>
+                <h3 class="text-2xl text-white font-medium uppercase tracking-tighter">Plano correto</h3>
+                <div class="grid grid-rows-[0fr] group-[.active]:grid-rows-[1fr] transition-[grid-template-rows] duration-700">
+                  <div class="overflow-hidden">
+                    <p class="text-neutral-400 text-xs mt-4 max-w-xs">A diferença do tratamento está em entender o motivo da queda de cabelo antes de definir ativos, frequência e acompanhamento.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="before-after-card flex-1 lg:flex-1 min-w-[78vw] sm:min-w-[62vw] lg:min-w-0 overflow-hidden cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group border-b lg:border-b-0 lg:border-r border-white/10 relative snap-center" data-result-card tabindex="0" role="button" aria-pressed="false" data-reveal>
+              <img class="transition-all duration-700 w-full h-full object-cover absolute inset-0 scale-105 grayscale group-[.active]:grayscale-0 group-[.active]:scale-110" src="assets/img/antesxdepois/resultados-pacientes-recupere-tricologia-16.webp" alt="Fortalecimento dos fios após tratamento capilar personalizado">
+              <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/45 to-transparent opacity-95 group-[.active]:opacity-80 transition-opacity duration-700"></div>
+              <div class="absolute inset-x-0 bottom-0 p-6 md:p-8 z-20">
+                <span class="block text-[9px] font-mono text-amber-300 mb-2 tracking-widest opacity-0 group-[.active]:opacity-100 transition-opacity uppercase">04 // Fortalecimento</span>
+                <h3 class="text-2xl text-white font-medium uppercase tracking-tighter">Fios mais resistentes</h3>
+                <div class="grid grid-rows-[0fr] group-[.active]:grid-rows-[1fr] transition-[grid-template-rows] duration-700">
+                  <div class="overflow-hidden">
+                    <p class="text-neutral-400 text-xs mt-4 max-w-xs">O acompanhamento médico combina tecnologia, rotina orientada e monitoramento da resposta ao tratamento capilar.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="before-after-card flex-1 lg:flex-1 min-w-[78vw] sm:min-w-[62vw] lg:min-w-0 overflow-hidden cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group border-b lg:border-b-0 last:border-0 border-white/10 relative snap-center" data-result-card tabindex="0" role="button" aria-pressed="false" data-reveal>
+              <img class="transition-all duration-700 w-full h-full object-cover absolute inset-0 scale-105 grayscale group-[.active]:grayscale-0 group-[.active]:scale-110" src="assets/img/antesxdepois/resultados-pacientes-recupere-tricologia-18.webp" alt="Resultado de densidade capilar após protocolo personalizado em Curitiba">
+              <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/45 to-transparent opacity-95 group-[.active]:opacity-80 transition-opacity duration-700"></div>
+              <div class="absolute inset-x-0 bottom-0 p-6 md:p-8 z-20">
+                <span class="block text-[9px] font-mono text-amber-300 mb-2 tracking-widest opacity-0 group-[.active]:opacity-100 transition-opacity uppercase">05 // Evolução</span>
+                <h3 class="text-2xl text-white font-medium uppercase tracking-tighter">Acompanhamento real</h3>
+                <div class="grid grid-rows-[0fr] group-[.active]:grid-rows-[1fr] transition-[grid-template-rows] duration-700">
+                  <div class="overflow-hidden">
+                    <p class="text-neutral-400 text-xs mt-4 max-w-xs">Resultados consistentes aparecem quando o plano respeita o tempo biológico do couro cabeludo e a evolução de cada paciente.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section z-20 bg-neutral-950 w-full border-white/10 border-t relative" id="reviews">
+      <div class="section-header">
+        <div class="section-index">03 - Avaliações</div>
+        <h2 class="section-title" data-split>Avaliações Google</h2>
+      </div>
+      <div class="widget-shell group" data-reveal>
+        <div class="widget-body">
+          <div class="button-row" style="margin-bottom:16px;">
+            <a id="google-reviews-link" class="ghost-button whatsapp-cta" href="#" target="_blank" rel="noopener" data-track-event="click_google_reviews">Abrir no Google</a>
+          </div>
+          <script defer async src="https://cdn.trustindex.io/loader.js?515aa3166d9e5507174662c9e55"></script>
+        </div>
+      </div>
+    </section>
+
+    <section class="section z-20 bg-neutral-950 w-full border-white/10 border-t relative" id="instagram">
+      <div class="section-header">
+        <div class="section-index">04 - Instagram</div>
+        <h2 class="section-title" data-split>Instagram</h2>
+      </div>
+      <div class="widget-shell group" data-reveal>
+        <div class="widget-body">
+          <script defer async src="https://cdn.trustindex.io/loader-feed.js?11ca21166ed855057d763f3da3e"></script>
+        </div>
+      </div>
+    </section>
+
+    <section class="z-20 bg-neutral-950 w-full border-t border-white/10 relative" id="sobre">
+      <div class="grid grid-cols-1 md:grid-cols-4 md:divide-x divide-white/10">
+        <div class="md:col-span-1 md:row-span-2 flex flex-col min-h-[220px] md:min-h-full pt-8 pr-8 pb-8 pl-8 justify-between">
+          <div class="flex flex-col gap-1">
+            <span class="font-mono text-neutral-600 text-xs block mb-1">/// Sobre</span>
+            <h2 class="leading-[0.9] text-4xl font-medium text-white tracking-tighter font-syne mb-6" data-split>Dra. Ana Hain</h2>
+          </div>
+        </div>
+
+        <div class="md:col-span-3 md:p-16 p-8 flex flex-col justify-center">
+          <h2 class="leading-none md:text-7xl lg:text-7xl text-4xl sm:text-5xl font-medium text-white tracking-tighter font-syne mb-8" data-split>Disciplina, medicina e tricologia a serviço de uma mudança real.</h2>
+          <div class="flex flex-col md:flex-row gap-12 md:items-end justify-between">
+            <div class="max-w-3xl space-y-5 text-neutral-400 text-sm md:text-lg font-light leading-relaxed">
+              <p data-reveal>Como ex-atleta de vôlei, conquistei o primeiro lugar em campeonatos brasileiros representando a seleção paranaense.</p>
+              <p data-reveal>Ao encerrar minha jornada no esporte, direcionei a mesma disciplina para a medicina e me formei na Faculdade Evangélica do Paraná, em Curitiba.</p>
+              <p data-reveal>Hoje sou médica dermatologista, membro da Sociedade Brasileira de Dermatologia e tricologista, com fellow em Tricologia em 2022. Minha paixão é transformar positivamente a vida dos meus pacientes com diagnóstico preciso, tratamento capilar individualizado e acompanhamento próximo.</p>
+              <div class="pt-2" data-reveal>
+                <strong class="block text-white text-base md:text-lg">Dra. Ana Hain</strong>
+                <span class="text-neutral-500 text-sm uppercase tracking-[0.2em]">A dermatologia mudando a sua vida.</span>
+              </div>
+            </div>
+
+            <div class="relative group cursor-pointer w-max shrink-0" data-reveal>
+              <div class="absolute -inset-[1px] rounded-md button-border-spin opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-[0.5px]"></div>
+              <a class="relative bg-neutral-900 border border-amber-300/20 text-neutral-300 px-5 py-2.5 rounded-md flex items-center gap-3 shadow-lg shadow-amber-300/10 h-full w-full group-hover:text-amber-200 group-hover:border-amber-200/50 transition-all duration-300" href="#agenda">
+                <span class="text-sm font-medium tracking-[0.2em] uppercase">Ver agenda online</span>
+                <iconify-icon class="text-neutral-500 group-hover:text-amber-200 group-hover:translate-x-1 transition-all duration-300" height="18" icon="solar:arrow-right-up-linear" width="18"></iconify-icon>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="md:col-span-1 p-8 md:p-12 flex flex-col min-h-[320px] border-t border-white/10 hover:bg-white/[0.02] transition-colors group relative justify-end" data-reveal>
+          <div class="text-6xl md:text-7xl font-medium text-white tracking-tighter mb-6"><span data-counter-target="2000" data-counter-suffix="+">0</span></div>
+          <p class="text-neutral-400 text-sm leading-relaxed max-w-[220px]">pacientes atendidos com olhar clínico, cuidado individual e acompanhamento próximo.</p>
+        </div>
+
+        <div class="md:col-span-1 p-8 md:p-12 flex flex-col justify-end min-h-[320px] border-t border-white/10 hover:bg-white/[0.02] transition-colors relative group" data-reveal>
+          <div class="text-6xl md:text-7xl font-medium text-white tracking-tighter mb-6"><span data-counter-target="18" data-counter-suffix="+">0</span></div>
+          <p class="text-neutral-400 text-sm leading-relaxed max-w-[220px]">anos de experiência cuidando de pessoas e transformando vidas com a dermatologia.</p>
+        </div>
+
+        <div class="md:col-span-1 flex flex-col hover:bg-white/[0.02] transition-colors group cursor-pointer overflow-hidden bg-center min-h-[320px] bg-[url(assets/anahain.avif)] bg-cover border-white/10 border-t relative" data-reveal>
+          <div class="group-hover:bg-transparent transition-colors bg-black/20 absolute top-0 right-0 bottom-0 left-0"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="z-20 bg-neutral-950 w-full border-white/10 border-t relative" id="agenda">
+      <div class="grid grid-cols-1 md:grid-cols-12 divide-y md:divide-y-0 md:divide-x divide-white/10">
+        <div class="md:col-span-4 flex flex-col lg:p-16 bg-neutral-950 pt-8 pr-8 pb-8 pl-8 justify-between">
+          <div class="max-w-sm">
+            <span class="font-mono text-neutral-600 text-xs block mb-4">/// Agenda</span>
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-syne tracking-tighter text-white mb-8 leading-[0.9]" data-split>Agenda<br><span class="text-neutral-600 italic"> Online</span></h2>
+            <div class="space-y-5 text-sm text-neutral-400 leading-relaxed">
+              <p data-reveal>Escolha um horário disponível e envie seu pedido de consulta em poucos passos.</p>
+              <p class="text-[10px] font-mono uppercase tracking-widest text-neutral-600 italic border-l border-amber-300 pl-4" id="rules-text" data-reveal>Carregando regras da agenda...</p>
+            </div>
+
+            <div class="relative group cursor-pointer w-max mt-8" data-reveal>
+              <div class="absolute -inset-[1px] rounded-md button-border-spin opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-[0.5px]"></div>
+              <a class="relative px-5 py-2.5 rounded-md flex items-center gap-3 h-full w-full transition-all duration-300 whatsapp-cta" href="#" id="public-whatsapp-2" target="_blank" rel="noopener" data-track-event="click_whatsapp">
+                <span class="text-xs font-medium tracking-[0.2em] uppercase">Agendar no WhatsApp</span>
+                <iconify-icon class="transition-all duration-300" height="16" icon="solar:arrow-right-up-linear" width="16"></iconify-icon>
+              </a>
+            </div>
+          </div>
+
+          <div class="mt-16 pt-8 border-t border-white/5 flex items-center gap-8">
+            <div>
+              <span class="block text-[9px] font-mono text-neutral-600 uppercase mb-1">Rua Professor Fábio de Souza, 714</span>
+              <span class="text-white text-xs font-mono">Santa Quitéria</span>
+            </div>
+            <div>
+              <span class="block text-[9px] font-mono text-neutral-600 uppercase mb-1">Cidade</span>
+              <span class="text-white text-xs font-mono">Curitiba</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="md:col-span-8 flex flex-col divide-y divide-white/10">
+          <div class="group relative p-8 lg:p-16 transition-all duration-500 hover:bg-white/[0.02]" data-reveal>
+            <div class="grid lg:grid-cols-2 gap-8">
+              <div class="booking-shell p-6 lg:p-8">
+                <span class="font-mono text-amber-300 text-[10px] tracking-widest uppercase mb-4 block">Calendário</span>
+                <h3 class="text-4xl text-white font-syne font-medium mb-6 uppercase tracking-tighter" data-split>Escolha o dia</h3>
+                <div class="flex flex-wrap gap-3 mb-6">
+                  <button class="relative bg-neutral-900 border border-amber-300/20 text-neutral-300 px-4 py-2 rounded-none hover:text-amber-200 hover:border-amber-200/50 transition-all duration-300" id="prev-month" type="button">Mês anterior</button>
+                  <button class="relative bg-neutral-900 border border-amber-300/20 text-neutral-300 px-4 py-2 rounded-none hover:text-amber-200 hover:border-amber-200/50 transition-all duration-300" id="next-month" type="button">Próximo mês</button>
+                </div>
+                <p class="text-[10px] font-mono uppercase tracking-widest text-neutral-600 italic border-l border-amber-300 pl-4 mb-6" id="calendar-title"></p>
+                <div class="calendar-weekdays mb-4" id="calendar-weekdays" aria-hidden="true"></div>
+                <div class="calendar-grid" id="calendar-grid" aria-live="polite"></div>
+              </div>
+
+              <div class="booking-shell p-6 lg:p-8">
+                <span class="font-mono text-amber-300 text-[10px] tracking-widest uppercase mb-4 block">Confirmação</span>
+                <h3 class="text-4xl text-white font-syne font-medium mb-6 uppercase tracking-tighter" data-split>Concluir agendamento</h3>
+                <p class="selected-date-label mb-6" id="selected-date-label">Selecione um dia no calendário acima.</p>
+                <div id="slots-panel">
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-neutral-600 italic border-l border-amber-300 pl-4 mb-4">Horários disponíveis</p>
+                  <div class="slots-list" id="slots-list" aria-live="polite"></div>
+                </div>
+
+                <form class="mt-8 space-y-4" id="booking-form" novalidate>
+                  <input id="slot-start" name="slot_start" type="hidden">
+                  <div>
+                    <label class="booking-label" for="patient-name">Nome completo</label>
+                    <input autocomplete="name" class="booking-input" id="patient-name" name="name" required type="text">
+                  </div>
+                  <div>
+                    <label class="booking-label" for="patient-email">E-mail</label>
+                    <input autocomplete="email" class="booking-input" id="patient-email" name="email" placeholder="seuemail@exemplo.com" required type="email">
+                  </div>
+                  <div>
+                    <label class="booking-label" for="patient-phone">WhatsApp</label>
+                    <input autocomplete="tel" class="booking-input" id="patient-phone" inputmode="numeric" maxlength="16" name="phone" placeholder="(41) 99999-9999" required type="tel">
+                  </div>
+                  <button class="booking-submit relative bg-neutral-900 border border-amber-300/20 text-neutral-300 px-5 py-3 rounded-none flex items-center gap-3 shadow-lg shadow-amber-300/10 hover:text-amber-200 hover:border-amber-200/50 transition-all duration-300" data-track-event="click_agendar" id="booking-submit" type="submit">
+                    <span class="text-xs font-medium tracking-[0.2em] uppercase" id="booking-submit-label">Confirmar agendamento</span>
+                    <iconify-icon class="text-neutral-500" height="16" icon="solar:arrow-right-up-linear" width="16"></iconify-icon>
+                  </button>
+                  <p class="booking-feedback" id="booking-feedback" aria-live="polite"></p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="overflow-hidden bg-center md:py-24 w-full z-20 border-white/10 border-t pt-16 pb-16 relative" id="versiculo">
+      <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div class="w-[40vw] h-[40vw] bg-amber-300/5 blur-[120px] rounded-full mix-blend-screen"></div>
+      </div>
+      <div class="relative z-10 max-w-4xl mx-auto px-6">
+        <div class="text-center mb-8 md:mb-10">
+          <h2 class="verse-title max-w-none" data-split>Uma pausa para a alma.</h2>
+        </div>
+        <div class="flex flex-col items-center text-center verse-shell widget-shell w-full p-8 md:p-10" id="verse-shell">
+          <p class="text-[10px] uppercase tracking-[0.3em] text-neutral-500 border border-white/10 px-4 py-2 bg-neutral-950/40 mb-5" id="verse-reference" data-reveal>Carregando referência...</p>
+          <h3 class="verse-text" id="verse-text" data-reveal>Carregando versículo do dia...</h3>
+        </div>
+      </div>
+    </section>
+
+    <section class="z-20 bg-neutral-950 w-full border-white/10 border-t relative" id="faq">
+      <div class="grid grid-cols-1 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-white/10">
+        <div class="md:col-span-1 flex flex-col min-h-[400px] h-full pt-8 pr-8 pb-8 pl-8">
+          <div>
+            <span class="font-mono text-neutral-600 text-xs block mb-4">/// FAQ</span>
+            <h2 class="text-3xl font-medium text-white tracking-tight font-syne mb-4" data-split>Perguntas frequentes</h2>
+            <p class="text-neutral-400 text-sm leading-relaxed mb-8" data-reveal>Respostas objetivas sobre tricologia, tratamento capilar e cuidados com o couro cabeludo em Curitiba.</p>
+          </div>
+
+        </div>
+
+        <div class="md:col-span-3 flex flex-col faq-list" id="faq-list">
+          <details class="faq-item" open data-reveal>
+            <summary>Quando devo procurar uma consulta de tricologia em Curitiba?</summary>
+            <p>Se você percebe queda de cabelo acima do habitual, afinamento, falhas ou alterações no couro cabeludo, a avaliação precoce ajuda a identificar a causa e definir o melhor tratamento capilar.</p>
+          </details>
+
+          <details class="faq-item" data-reveal>
+            <summary>O tratamento capilar é igual para todo mundo?</summary>
+            <p>Não. Cada paciente precisa de diagnóstico, exame clínico e conduta individualizada. Em tricologia, o protocolo depende da causa da queda, do afinamento e da saúde do couro cabeludo.</p>
+          </details>
+
+          <details class="faq-item" data-reveal>
+            <summary>O MesojectGun sem agulhas dói?</summary>
+            <p>O MesojectGun foi pensado para entregar ativos no couro cabeludo com mais conforto. É uma tecnologia moderna, sem agulhas, indicada quando há critério clínico para fortalecer os fios e apoiar protocolos de crescimento capilar.</p>
+          </details>
+
+          <details class="faq-item" data-reveal>
+            <summary>Como funciona a consulta com a Dra. Ana Hain?</summary>
+            <p>A consulta inclui escuta clínica, avaliação dermatológica e definição do plano terapêutico. O objetivo é investigar a causa da queixa e orientar cuidados capilares seguros para cada caso.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="overflow-hidden flex bg-center md:py-48 w-full z-20 border-white/10 border-t pt-32 pb-32 relative items-center justify-center" id="contato">
+      <div class="absolute inset-0 flex items-center justify-center pointer-events-none"><div class="w-[40vw] h-[40vw] bg-amber-300/5 blur-[120px] rounded-full mix-blend-screen"></div></div>
+      <div class="relative z-10 flex flex-col items-center text-center px-6 w-full max-w-[1200px] mx-auto gap-10">
+        <h2 class="text-4xl md:text-6xl lg:text-8xl font-syne tracking-tighter text-white font-semibold mb-6" data-split>Não espere a queda avançar para procurar ajuda.</h2>
+        <p class="text-neutral-400 text-base md:text-lg max-w-lg mb-12 leading-relaxed" data-reveal>Se você percebe aumento da queda, afinamento ou falhas, agende sua avaliação e investigue a causa com critério médico.</p>
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <div class="relative group cursor-pointer w-max" data-reveal>
+            <div class="absolute -inset-[1px] rounded-md button-border-spin opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-[0.5px]"></div>
+            <a class="relative px-5 py-2.5 rounded-md flex items-center gap-3 h-full w-full transition-all duration-300 whatsapp-cta" href="#" id="public-whatsapp-3" target="_blank" rel="noopener" data-track-event="click_whatsapp">
+              <span class="text-sm font-medium tracking-[0.2em] uppercase">Agendar via WhatsApp</span>
+              <iconify-icon class="transition-all duration-300" height="18" icon="solar:arrow-right-up-linear" width="18"></iconify-icon>
+            </a>
+          </div>
+        </div>
+        <div class="w-full contact-grid text-left">
+          <div class="contact-card p-8 md:p-10" data-reveal>
+            <div class="space-y-6">
+              <span class="inline-flex w-max items-center gap-2 text-[10px] uppercase tracking-[0.28em] text-neutral-500 border border-white/10 px-4 py-2 bg-neutral-950/40">Contato e localização</span>
+              <div class="grid gap-4 sm:grid-cols-1">
+                <div class="border border-white/10 bg-white/[0.02] p-5">
+                  <span class="block text-[10px] uppercase tracking-[0.24em] text-neutral-500 mb-2">Endereço</span>
+                  <strong class="block text-white text-base">Rua Professor Fábio de Souza, 714</strong>
+                  <p class="text-neutral-400 text-sm mt-2 leading-relaxed">Santa Quitéria, Curitiba - PR<br>CEP 80310-230</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-wrap items-center gap-4">
+              <a class="ghost-button" href="https://www.google.com/maps/place/R.+Prof.+F%C3%A1bio+de+Souza,+714+-+Santa+Quiteria,+Curitiba+-+PR,+80310-230/@-25.4594473,-49.3093357,17z/data=!3m1!4b1!4m6!3m5!1s0x94dce3a13458e11d:0x33c2ccb2c4aaf90!8m2!3d-25.4594473!4d-49.3093357!16s%2Fg%2F11c1jkrbsp?entry=ttu&g_ep=EgoyMDI2MDMwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" data-reveal>
+                Abrir no Google Maps
+              </a>
+            </div>
+          </div>
+          <div class="map-shell" data-reveal>
+            <iframe class="map-frame" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=R.%20Prof.%20F%C3%A1bio%20de%20Souza,%20714%20-%20Santa%20Quiteria,%20Curitiba%20-%20PR,%2080310-230&t=k&z=17&output=embed" title="Mapa satélite da clínica da Dra. Ana Hain em Curitiba"></iframe>
+            <div class="map-overlay">
+              <div>
+                <span class="block text-[10px] uppercase tracking-[0.22em] text-neutral-500 mb-2">Mapa satélite</span>
+                <strong class="block text-white text-sm">Rua Professor Fábio de Souza, 714</strong>
+                <p class="text-neutral-400 text-sm mt-2">Santa Quitéria, Curitiba - PR</p>
+              </div>
+              <a class="ghost-button" href="https://www.google.com/maps/place/R.+Prof.+F%C3%A1bio+de+Souza,+714+-+Santa+Quiteria,+Curitiba+-+PR,+80310-230/@-25.4594473,-49.3093357,17z/data=!3m1!4b1!4m6!3m5!1s0x94dce3a13458e11d:0x33c2ccb2c4aaf90!8m2!3d-25.4594473!4d-49.3093357!16s%2Fg%2F11c1jkrbsp?entry=ttu&g_ep=EgoyMDI2MDMwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">
+                Ver rota
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="relative z-20 w-full border-t border-white/10 bg-neutral-950">
+    <div class="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr_0.8fr] divide-y lg:divide-y-0 lg:divide-x divide-white/10">
+      <div class="p-8 md:p-10 flex flex-col gap-8 justify-between items-center text-center">
+        <div class="space-y-6">
+          <img src="assets/img/logotipodermatologista.svg" alt="Logotipo Dra. Ana Hain" class="footer-brand-logo">
+        </div>
+        <div class="space-y-3 max-w-md mx-auto">
+          <h4 class="text-white text-sm font-medium uppercase tracking-widest">Versículo do dia</h4>
+          <p class="text-neutral-400 text-sm leading-relaxed max-w-md" id="footer-verse-preview">Carregando versículo do dia...</p>
+        </div>
+      </div>
+
+      <div class="p-8 md:p-10">
+        <h4 class="text-white text-sm font-medium uppercase tracking-widest mb-6">Mapa do site</h4>
+        <ul class="space-y-4">
+          <li><a class="text-neutral-500 text-sm hover:text-white transition-colors" href="#hero">Início</a></li>
+          <li><a class="text-neutral-500 text-sm hover:text-white transition-colors" href="#tratamentos">Tratamentos</a></li>
+          <li><a class="text-neutral-500 text-sm hover:text-white transition-colors" href="#resultados">Resultados</a></li>
+          <li><a class="text-neutral-500 text-sm hover:text-white transition-colors" href="#agenda">Agenda online</a></li>
+          <li><a class="text-neutral-500 text-sm hover:text-white transition-colors" href="#faq">Perguntas frequentes</a></li>
+          <li><a class="text-neutral-500 text-sm hover:text-white transition-colors" href="#contato">Contato</a></li>
+        </ul>
+      </div>
+
+      <div class="p-8 md:p-10">
+        <h4 class="text-white text-sm font-medium uppercase tracking-widest mb-6">Redes sociais</h4>
+        <div class="footer-socials">
+          <a class="footer-social-link" href="#" id="public-instagram-footer" target="_blank" rel="noopener">
+            <span class="footer-social-mark footer-social-mark--instagram">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path></svg>
+            </span>
+            <div>
+              <strong class="block text-white text-sm">Instagram</strong>
+            </div>
+          </a>
+          <a class="footer-social-link" href="#" id="public-google-business" target="_blank" rel="noopener">
+            <span class="footer-social-mark footer-social-mark--google">G</span>
+            <div>
+              <strong class="block text-white text-sm">Google</strong>
+              <span class="text-neutral-500 text-xs uppercase tracking-[0.18em]">Perfil e avaliações</span>
+            </div>
+          </a>
+          <a class="footer-social-link" href="#" id="public-whatsapp-footer" target="_blank" rel="noopener">
+            <span class="footer-social-mark footer-social-mark--whatsapp">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12.031 0C5.398 0 .012 5.39 .012 12.031c0 2.12.553 4.195 1.603 6.01L.012 24l6.107-1.603a11.968 11.968 0 005.912 1.564v-.001h.001c6.633 0 12.019-5.391 12.019-12.031 0-3.218-1.253-6.248-3.528-8.525A11.944 11.944 0 0012.03 0zm0 21.996h-.001c-1.8 0-3.565-.483-5.115-1.397l-.367-.217-3.804.998 1.018-3.71-.238-.38A9.973 9.973 0 011.992 12.03C1.992 6.502 6.49 2.002 12.032 2.002c2.677 0 5.192 1.042 7.085 2.937 1.892 1.895 2.934 4.412 2.934 7.092 0 5.528-4.498 10.027-10.021 10.027z"></path><path d="M17.513 13.93c-.276-.139-1.631-.806-1.884-.897-.253-.092-.437-.139-.62.139-.184.276-.713.897-.874 1.081-.161.185-.322.208-.598.069-1.72-.98-2.9-2.002-4.008-3.918-.184-.321.185-.298.711-1.353.069-.138.035-.253-.012-.345-.046-.092-.62-1.498-.85-2.052-.224-.54-.452-.467-.62-.476h-.528c-.184 0-.483.069-.736.345-.253.276-.966.945-.966 2.304 0 1.359.989 2.672 1.127 2.856.138.184 1.944 2.972 4.708 4.167 1.97.854 2.7.925 3.228.874.594-.058 1.631-.667 1.862-1.311.23-.645.23-1.198.161-1.311-.069-.115-.253-.184-.529-.323z"></path></svg>
+            </span>
+            <div>
+              <strong class="block text-white text-sm">WhatsApp</strong>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-white/10 mt-0">
+      <div class="px-8 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
+        <span class="text-neutral-600 text-xs">© <span id="footer-year"></span> <span data-brand-name>Dra. Ana Hain</span>. Todos os direitos reservados.</span>
+        <span class="text-neutral-600 text-xs">Curitiba | Tricologia</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="floating-actions">
+    <a aria-label="Abrir WhatsApp" class="float-btn float-whatsapp" href="#" id="floating-whatsapp-link" target="_blank" rel="noopener" data-track-event="click_whatsapp">
+      <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12.031 0C5.398 0 .012 5.39 .012 12.031c0 2.12.553 4.195 1.603 6.01L.012 24l6.107-1.603a11.968 11.968 0 005.912 1.564v-.001h.001c6.633 0 12.019-5.391 12.019-12.031 0-3.218-1.253-6.248-3.528-8.525A11.944 11.944 0 0012.03 0zm0 21.996h-.001c-1.8 0-3.565-.483-5.115-1.397l-.367-.217-3.804.998 1.018-3.71-.238-.38A9.973 9.973 0 011.992 12.03C1.992 6.502 6.49 2.002 12.032 2.002c2.677 0 5.192 1.042 7.085 2.937 1.892 1.895 2.934 4.412 2.934 7.092 0 5.528-4.498 10.027-10.021 10.027z"></path><path d="M17.513 13.93c-.276-.139-1.631-.806-1.884-.897-.253-.092-.437-.139-.62.139-.184.276-.713.897-.874 1.081-.161.185-.322.208-.598.069-1.72-.98-2.9-2.002-4.008-3.918-.184-.321.185-.298.711-1.353.069-.138.035-.253-.012-.345-.046-.092-.62-1.498-.85-2.052-.224-.54-.452-.467-.62-.476h-.528c-.184 0-.483.069-.736.345-.253.276-.966.945-.966 2.304 0 1.359.989 2.672 1.127 2.856.138.184 1.944 2.972 4.708 4.167 1.97.854 2.7.925 3.228.874.594-.058 1.631-.667 1.862-1.311.23-.645.23-1.198.161-1.311-.069-.115-.253-.184-.529-.323z"></path></svg>
+    </a>
+
+    <a aria-label="Abrir Instagram" class="float-btn float-instagram" href="#" id="floating-instagram-link" target="_blank" rel="noopener" data-track-event="click_instagram">
+      <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path></svg>
+    </a>
+  </div>
+
+  <script>
+  function setActiveBeforeAfterCard(element) {
+    const container = document.getElementById("before-after-container");
+    if (!container || !element) return;
+
+    const cards = container.querySelectorAll("[data-result-card]");
+    cards.forEach((card) => {
+      card.classList.remove("active", "lg:flex-[3]");
+      card.classList.add("lg:flex-1");
+      card.setAttribute("aria-pressed", "false");
+    });
+
+    element.classList.add("active", "lg:flex-[3]");
+    element.classList.remove("lg:flex-1");
+    element.setAttribute("aria-pressed", "true");
+  }
+
+  function splitTextForReveal() {
+    const splitTargets = document.querySelectorAll("[data-split]");
+    splitTargets.forEach((target) => {
+      if (target.dataset.splitReady === "1") return;
+
+      const text = target.textContent.trim().replace(/\s+/g, " ");
+      if (!text) return;
+
+      const words = text.split(" ");
+      target.textContent = "";
+      target.dataset.splitReady = "1";
+
+      words.forEach((word) => {
+        const wrap = document.createElement("span");
+        wrap.className = "split-word-wrap";
+
+        const inner = document.createElement("span");
+        inner.className = "split-word";
+        inner.textContent = word;
+
+        wrap.appendChild(inner);
+        target.appendChild(wrap);
+      });
+    });
+  }
+
+  function setupMobileMenu() {
+    const button = document.getElementById("mobile-menu-button");
+    const panel = document.getElementById("mobile-menu-panel");
+    if (!button || !panel) return;
+
+    const closeMenu = () => {
+      panel.classList.add("hidden");
+      panel.classList.remove("flex");
+      button.setAttribute("aria-expanded", "false");
+    };
+
+    button.addEventListener("click", () => {
+      const isOpen = !panel.classList.contains("hidden");
+      if (isOpen) {
+        closeMenu();
+      } else {
+        panel.classList.remove("hidden");
+        panel.classList.add("flex");
+        button.setAttribute("aria-expanded", "true");
+      }
+    });
+
+    panel.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeMenu);
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!panel.contains(event.target) && !button.contains(event.target)) {
+        closeMenu();
+      }
+    });
+  }
+
+  function setupRevealObserver() {
+    splitTextForReveal();
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        const target = entry.target;
+        const delay = Number(target.dataset.revealDelay || 0) * 120;
+
+        setTimeout(() => {
+          if (target.hasAttribute("data-split")) {
+            target.classList.add("is-visible");
+          } else {
+            target.classList.remove("reveal-hidden");
+            target.classList.add("animate-in");
+          }
+
+          if (target.classList.contains("hero-live-title")) {
+            target.classList.add("is-live");
+          }
+
+          if (target.classList.contains("hero-live-copy")) {
+            target.classList.add("is-live");
+          }
+        }, delay);
+
+        observer.unobserve(target);
+      });
+    }, { threshold: 0.12 });
+
+    const targets = document.querySelectorAll("[data-reveal], [data-split]");
+    targets.forEach((el) => {
+      if (el.hasAttribute("data-split")) {
+        observer.observe(el);
+      } else {
+        el.classList.add("reveal-hidden");
+        observer.observe(el);
+      }
+    });
+  }
+
+  function setupMesojectVideo() {
+    const video = document.getElementById("mesoject-video");
+    const soundButton = document.getElementById("mesoject-sound-toggle");
+    const soundLabel = document.getElementById("mesoject-sound-label");
+    const playButton = document.getElementById("mesoject-play-toggle");
+    const playLabel = document.getElementById("mesoject-play-label");
+    if (!video || !soundButton || !soundLabel || !playButton || !playLabel) return;
+
+    const syncControls = () => {
+      const isPlaying = !video.paused && !video.ended;
+
+      soundLabel.textContent = video.muted ? "Ativar som" : "Silenciar";
+      playLabel.textContent = isPlaying ? "Pausar" : "Reproduzir";
+      soundButton.setAttribute("aria-pressed", video.muted ? "false" : "true");
+      playButton.setAttribute("aria-pressed", isPlaying ? "true" : "false");
+    };
+
+    const tryAutoplay = () => {
+      const playPromise = video.play();
+      if (playPromise && typeof playPromise.catch === "function") {
+        playPromise.catch(() => {
+          syncControls();
+        });
+      }
+    };
+
+    try {
+      video.loop = true;
+      video.muted = true;
+      video.volume = 0.18;
+    } catch (error) {}
+
+    syncControls();
+
+    soundButton.addEventListener("click", () => {
+      video.muted = !video.muted;
+      if (!video.muted) {
+        video.volume = 0.18;
+      }
+      syncControls();
+    });
+
+    playButton.addEventListener("click", () => {
+      if (video.paused) {
+        video.play().catch(() => {});
+      } else {
+        video.pause();
+      }
+      syncControls();
+    });
+
+    video.addEventListener("loadeddata", tryAutoplay, { once: true });
+    video.addEventListener("play", syncControls);
+    video.addEventListener("pause", syncControls);
+    video.addEventListener("ended", syncControls);
+  }
+
+  function setupCounters() {
+    const counters = document.querySelectorAll("[data-counter-target]");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        const el = entry.target;
+        const target = Number(el.dataset.counterTarget || 0);
+        const suffix = el.dataset.counterSuffix || "";
+        const duration = 1400;
+        const start = performance.now();
+
+        const tick = (now) => {
+          const progress = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          const value = Math.round(target * eased);
+          el.textContent = value.toLocaleString("pt-BR") + suffix;
+
+          if (progress < 1) {
+            requestAnimationFrame(tick);
+          }
+        };
+
+        requestAnimationFrame(tick);
+        observer.unobserve(el);
+      });
+    }, { threshold: 0.45 });
+
+    counters.forEach((counter) => observer.observe(counter));
+  }
+
+  function formatPhone(value) {
+    const digits = value.replace(/\D/g, "").slice(0, 11);
+    if (digits.length <= 2) return digits;
+    if (digits.length <= 7) return `(${digits.slice(0, 2)}) ${digits.slice(2)}`;
+    if (digits.length <= 11) return `(${digits.slice(0, 2)}) ${digits.slice(2, 7)}-${digits.slice(7)}`;
+    return value;
+  }
+
+  function digitsOnly(value) {
+    return String(value || "").replace(/\D/g, "");
+  }
+
+  function isValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(email || "").trim());
+  }
+
+  function formatDateKey(date) {
+    return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
+  }
+
+  function formatHumanDate(dateKey) {
+    const [year, month, day] = String(dateKey || "").split("-").map(Number);
+    const date = new Date(year, (month || 1) - 1, day || 1);
+    return date.toLocaleDateString("pt-BR", {
+      weekday: "long",
+      day: "2-digit",
+      month: "long",
+      year: "numeric"
+    });
+  }
+
+  function apiUrl(config, path) {
+    const base = String(config.apiBase || "api").replace(/\/+$/, "");
+    const suffix = String(path || "").startsWith("/") ? path : `/${path}`;
+    return `${base}${suffix}`;
+  }
+
+  function apiGet(config, path) {
+    return fetch(apiUrl(config, path), {
+      credentials: "same-origin"
+    }).then((response) => response.json());
+  }
+
+  function apiPost(config, path, data) {
+    return fetch(apiUrl(config, path), {
+      method: "POST",
+      credentials: "same-origin",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data || {})
+    }).then((response) => response.json());
+  }
+
+  function setupPhoneMask() {
+    const input = document.getElementById("patient-phone");
+    if (!input) return;
+
+    input.addEventListener("input", () => {
+      input.value = formatPhone(input.value);
+    });
+  }
+
+  function createWhatsappUrl(phone, text) {
+    const digits = String(phone || "").replace(/\D/g, "");
+    if (!digits) return "#";
+    return `https://wa.me/${digits}?text=${encodeURIComponent(text || "")}`;
+  }
+
+  function bindHref(ids, url, hiddenWhenEmpty = false) {
+    ids.forEach((id) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+
+      if (!url) {
+        if (hiddenWhenEmpty) {
+          el.hidden = true;
+          el.setAttribute("aria-hidden", "true");
+        } else {
+          el.href = "#";
+        }
+        return;
+      }
+
+      el.href = url;
+      el.hidden = false;
+      el.removeAttribute("aria-hidden");
+    });
+  }
+
+  function setupPublicLinks(config) {
+    const brandNameEls = document.querySelectorAll("[data-brand-name]");
+    const shortBrandName = String(config.brandName || "Dra. Ana Hain").split("|")[0].trim() || "Dra. Ana Hain";
+    brandNameEls.forEach((el) => {
+      el.textContent = shortBrandName;
+    });
+
+    const whatsappMessage = config.whatsappMessage || "Olá! Gostaria de agendar uma avaliação capilar.";
+    const whatsappUrl = config.whatsappUrl || createWhatsappUrl(config.whatsappNumber, whatsappMessage);
+
+    bindHref([
+      "public-whatsapp",
+      "public-whatsapp-mobile",
+      "public-whatsapp-hero",
+      "public-whatsapp-2",
+      "public-whatsapp-3",
+      "public-whatsapp-card",
+      "public-whatsapp-footer",
+      "floating-whatsapp-link"
+    ], whatsappUrl);
+
+    bindHref([
+      "public-instagram-3",
+      "public-instagram-footer",
+      "floating-instagram-link"
+    ], config.instagramUrl || "#");
+
+    bindHref([
+      "public-google-business",
+      "public-google-business-2",
+      "google-reviews-link"
+    ], config.googleBusinessUrl || "", true);
+  }
+
+  function setupVerse(config) {
+    const verseText = document.getElementById("verse-text");
+    const verseReference = document.getElementById("verse-reference");
+    const footerVerse = document.getElementById("footer-verse-preview");
+
+    if (!verseText || !verseReference) return;
+
+    const renderVerse = (verse) => {
+      const text = verse && verse.text
+        ? verse.text
+        : "Carregando versiculo do dia novamente em instantes.";
+      const reference = verse && verse.reference
+        ? verse.reference
+        : "Versiculo do Dia";
+
+      verseText.textContent = text;
+      verseReference.textContent = reference;
+      if (footerVerse) footerVerse.textContent = text;
+    };
+
+    renderVerse({
+      text: "Carregando versiculo do dia...",
+      reference: "Carregando referencia..."
+    });
+
+    apiGet(config, "/public/verse.php")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(response.message || "Falha ao carregar o versiculo.");
+        }
+
+        renderVerse(response);
+      })
+      .catch(() => {
+        renderVerse({
+          text: "Carregando versiculo do dia novamente em instantes.",
+          reference: "Versiculo do Dia"
+        });
+      });
+
+    return;
+
+    const verse = config.dailyVerse || {
+      text: "Entreguem todas as suas preocupações a Deus, pois ele cuida de vocês.",
+      reference: "1 Pedro 5:7"
+    };
+
+    if (verseText) verseText.textContent = verse.text;
+    if (verseReference) verseReference.textContent = verse.reference;
+    if (footerVerse) footerVerse.textContent = verse.text;
+  }
+
+  function setupCalendar(config) {
+    const titleEl = document.getElementById("calendar-title");
+    const weekdaysEl = document.getElementById("calendar-weekdays");
+    const gridEl = document.getElementById("calendar-grid");
+    const slotsEl = document.getElementById("slots-list");
+    const selectedDateLabel = document.getElementById("selected-date-label");
+    const slotStartInput = document.getElementById("slot-start");
+    const prevBtn = document.getElementById("prev-month");
+    const nextBtn = document.getElementById("next-month");
+    const rulesText = document.getElementById("rules-text");
+
+    if (!titleEl || !weekdaysEl || !gridEl || !slotsEl || !selectedDateLabel || !slotStartInput) return;
+
+    const weekdays = ["Seg", "Ter", "Qua", "Qui", "Sex"];
+    weekdaysEl.innerHTML = weekdays.map((day) => `<div>${day}</div>`).join("");
+
+    {
+    let slotsByDate = {};
+    let selectedDate = "";
+    let selectedSlot = "";
+    let currentMonth = new Date();
+    currentMonth.setDate(1);
+
+    const monthFormatter = new Intl.DateTimeFormat("pt-BR", { month: "long", year: "numeric" });
+    const sortedKeys = () => Object.keys(slotsByDate).sort();
+
+    const syncRules = (rules) => {
+      if (!rulesText) return;
+
+      if (!rules) {
+        rulesText.textContent = "Agenda sujeita a confirmacao da clinica.";
+        return;
+      }
+
+      rulesText.textContent = `Antecedência minima de ${rules.min_notice_hours} horas. Janela de agendamento em ate ${rules.max_days_ahead} dias.`;
+    };
+
+    const pickDefaultDateForMonth = (allowFallback) => {
+      const monthKey = `${currentMonth.getFullYear()}-${String(currentMonth.getMonth() + 1).padStart(2, "0")}`;
+      const monthDates = sortedKeys().filter((key) => key.startsWith(monthKey));
+
+      if (monthDates.length) {
+        return monthDates[0];
+      }
+
+      return allowFallback ? (sortedKeys()[0] || "") : "";
+    };
+
+    const syncSelectedSlot = () => {
+      const slots = selectedDate ? (slotsByDate[selectedDate] || []) : [];
+      const hasSelectedSlot = slots.some((slot) => slot.slot_start === selectedSlot);
+
+      if (!hasSelectedSlot) {
+        selectedSlot = slots.length ? slots[0].slot_start : "";
+      }
+
+      slotStartInput.value = selectedSlot;
+    };
+
+    const renderSlots = () => {
+      slotsEl.innerHTML = "";
+
+      if (!selectedDate) {
+        selectedDateLabel.textContent = "Selecione um dia no calendario acima.";
+        slotStartInput.value = "";
+        slotsEl.innerHTML = `<div class="calendar-empty">Nenhum horario disponivel no momento.</div>`;
+        return;
+      }
+
+      const slots = slotsByDate[selectedDate] || [];
+      syncSelectedSlot();
+
+      selectedDateLabel.textContent = slots.length
+        ? `Horarios disponiveis para ${formatHumanDate(selectedDate)}.`
+        : `Nenhum horario disponivel para ${formatHumanDate(selectedDate)}.`;
+
+      if (!slots.length) {
+        slotsEl.innerHTML = `<div class="calendar-empty">Sem horarios disponiveis nesta data.</div>`;
+        return;
+      }
+
+      slots.forEach((slot) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = `slot-btn${selectedSlot === slot.slot_start ? " is-selected" : ""}`;
+        btn.innerHTML = `<strong>${slot.time_label}</strong><small>consulta</small>`;
+        btn.addEventListener("click", () => {
+          selectedSlot = slot.slot_start;
+          slotStartInput.value = selectedSlot;
+          renderSlots();
+        });
+        slotsEl.appendChild(btn);
+      });
+    };
+
+    const renderCalendar = () => {
+      titleEl.textContent = monthFormatter.format(currentMonth);
+      gridEl.innerHTML = "";
+
+      const year = currentMonth.getFullYear();
+      const month = currentMonth.getMonth();
+      const lastDay = new Date(year, month + 1, 0);
+      let rendered = 0;
+
+      for (let day = 1; day <= lastDay.getDate(); day++) {
+        const date = new Date(year, month, day);
+        const weekDay = date.getDay();
+        if (weekDay === 0 || weekDay === 6) continue;
+
+        const dateKey = formatDateKey(date);
+        const hasSlots = Array.isArray(slotsByDate[dateKey]) && slotsByDate[dateKey].length > 0;
+        if (!hasSlots) continue;
+
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "day-cell";
+        btn.innerHTML = `<strong>${String(day).padStart(2, "0")}</strong><small></small>`;
+        btn.addEventListener("click", () => {
+          selectedDate = dateKey;
+          selectedSlot = "";
+          renderCalendar();
+          renderSlots();
+        });
+
+        if (selectedDate === dateKey) {
+          btn.classList.add("is-selected");
+        }
+
+        gridEl.appendChild(btn);
+        rendered += 1;
+      }
+
+      if (!rendered) {
+        gridEl.innerHTML = `<div class="calendar-empty">Sem horarios neste mes.</div>`;
+      }
+    };
+
+    const loadCalendar = () => {
+      if (rulesText) {
+        rulesText.textContent = "Carregando agenda...";
+      }
+      selectedDateLabel.textContent = "Carregando horarios disponiveis...";
+      slotsEl.innerHTML = `<div class="calendar-empty">Carregando agenda...</div>`;
+
+      return apiGet(config, "/public/slots.php")
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(response.message || "Falha ao carregar a agenda.");
+          }
+
+          slotsByDate = response.slots_by_date || {};
+          syncRules(response.rules || null);
+
+          if (!selectedDate || !slotsByDate[selectedDate]) {
+            selectedDate = pickDefaultDateForMonth(true);
+          }
+
+          if (selectedDate) {
+            const [year, month] = selectedDate.split("-").map(Number);
+            currentMonth = new Date(year, (month || 1) - 1, 1);
+          }
+
+          selectedSlot = "";
+          renderCalendar();
+          renderSlots();
+        })
+        .catch((error) => {
+          syncRules(null);
+          selectedDate = "";
+          selectedSlot = "";
+          slotStartInput.value = "";
+          gridEl.innerHTML = `<div class="calendar-empty">Erro ao carregar a agenda.</div>`;
+          slotsEl.innerHTML = `<div class="calendar-empty">${error.message}</div>`;
+          selectedDateLabel.textContent = "Nao foi possivel carregar os horarios agora.";
+        });
+    };
+
+    prevBtn?.addEventListener("click", () => {
+      currentMonth.setMonth(currentMonth.getMonth() - 1);
+      selectedDate = pickDefaultDateForMonth(false);
+      selectedSlot = "";
+      renderCalendar();
+      renderSlots();
+    });
+
+    nextBtn?.addEventListener("click", () => {
+      currentMonth.setMonth(currentMonth.getMonth() + 1);
+      selectedDate = pickDefaultDateForMonth(false);
+      selectedSlot = "";
+      renderCalendar();
+      renderSlots();
+    });
+
+    config.clearSelectedSlot = () => {
+      selectedSlot = "";
+      slotStartInput.value = "";
+    };
+    config.reloadCalendar = loadCalendar;
+
+    loadCalendar();
+    }
+    return;
+
+    const schedule = config.schedule || {};
+    const rules = config.scheduleRulesText || "Agenda sujeita à confirmação da clínica.";
+    if (rulesText) rulesText.textContent = rules;
+
+    let current = new Date();
+    current.setDate(1);
+
+    let selectedDate = null;
+    let selectedSlot = null;
+
+    const monthFormatter = new Intl.DateTimeFormat("pt-BR", { month: "long", year: "numeric" });
+    const dateLabelFormatter = new Intl.DateTimeFormat("pt-BR", { weekday: "long", day: "2-digit", month: "long" });
+
+    function getMonthKey(date) {
+      return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}`;
+    }
+
+    function normalizeDate(date) {
+      return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
+    }
+
+    function renderSlots(dateKey) {
+      slotsEl.innerHTML = "";
+      selectedSlot = null;
+      slotStartInput.value = "";
+
+      const slots = schedule[dateKey] || [];
+      selectedDateLabel.textContent = slots.length
+        ? `Horários disponíveis para ${dateLabelFormatter.format(new Date(dateKey + "T00:00:00"))}.`
+        : `Nenhum horário disponível para ${dateLabelFormatter.format(new Date(dateKey + "T00:00:00"))}.`;
+
+      if (!slots.length) {
+        slotsEl.innerHTML = `<div class="calendar-empty">Sem horários disponíveis nesta data.</div>`;
+        return;
+      }
+
+      slots.forEach((slot) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "slot-btn";
+        btn.innerHTML = `<strong>${slot.label}</strong><small>${slot.duration || "consulta"}</small>`;
+        btn.addEventListener("click", () => {
+          slotsEl.querySelectorAll(".slot-btn").forEach((b) => b.classList.remove("is-selected"));
+          btn.classList.add("is-selected");
+          selectedSlot = slot;
+          slotStartInput.value = slot.start;
+        });
+        slotsEl.appendChild(btn);
+      });
+    }
+
+    function renderCalendar() {
+      titleEl.textContent = monthFormatter.format(current);
+      gridEl.innerHTML = "";
+
+      const year = current.getFullYear();
+      const month = current.getMonth();
+      const firstDay = new Date(year, month, 1);
+      const lastDay = new Date(year, month + 1, 0);
+
+      for (let day = 1; day <= lastDay.getDate(); day++) {
+        const date = new Date(year, month, day);
+        const weekDay = date.getDay();
+        if (weekDay === 0 || weekDay === 6) continue;
+
+        const dateKey = normalizeDate(date);
+        const hasSlots = Array.isArray(schedule[dateKey]) && schedule[dateKey].length > 0;
+
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "day-cell";
+        btn.innerHTML = `<strong>${String(day).padStart(2, "0")}</strong><small>${hasSlots ? "disponível" : "sem vagas"}</small>`;
+
+        if (!hasSlots) {
+          btn.disabled = true;
+          btn.classList.add("opacity-40", "cursor-not-allowed");
+        } else {
+          btn.addEventListener("click", () => {
+            gridEl.querySelectorAll(".day-cell").forEach((cell) => cell.classList.remove("is-selected"));
+            btn.classList.add("is-selected");
+            selectedDate = dateKey;
+            renderSlots(dateKey);
+          });
+        }
+
+        if (selectedDate === dateKey) {
+          btn.classList.add("is-selected");
+        }
+
+        gridEl.appendChild(btn);
+      }
+    }
+
+    prevBtn?.addEventListener("click", () => {
+      current.setMonth(current.getMonth() - 1);
+      renderCalendar();
+      slotsEl.innerHTML = "";
+      selectedDateLabel.textContent = "Selecione um dia no calendário acima.";
+      slotStartInput.value = "";
+    });
+
+    nextBtn?.addEventListener("click", () => {
+      current.setMonth(current.getMonth() + 1);
+      renderCalendar();
+      slotsEl.innerHTML = "";
+      selectedDateLabel.textContent = "Selecione um dia no calendário acima.";
+      slotStartInput.value = "";
+    });
+
+    renderCalendar();
+  }
+
+  function setupBookingForm(config) {
+    const form = document.getElementById("booking-form");
+    const feedback = document.getElementById("booking-feedback");
+    const slotStartInput = document.getElementById("slot-start");
+    const nameInput = document.getElementById("patient-name");
+    const emailInput = document.getElementById("patient-email");
+    const phoneInput = document.getElementById("patient-phone");
+    const submitLabel = document.getElementById("booking-submit-label");
+
+    if (!form || !feedback || !slotStartInput || !nameInput || !emailInput || !phoneInput) return;
+
+    const submitButton = form.querySelector('button[type="submit"]');
+    let isSubmitting = false;
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      if (isSubmitting) return;
+
+      feedback.className = "booking-feedback";
+      feedback.textContent = "";
+
+      if (!slotStartInput.value) {
+        feedback.classList.add("error");
+        feedback.textContent = "Selecione um horario disponivel antes de continuar.";
+        return;
+      }
+
+      if (!nameInput.value.trim() || !emailInput.value.trim() || !phoneInput.value.trim()) {
+        feedback.classList.add("error");
+        feedback.textContent = "Preencha nome, e-mail e WhatsApp.";
+        return;
+      }
+
+      if (!isValidEmail(emailInput.value.trim())) {
+        feedback.classList.add("error");
+        feedback.textContent = "Informe um e-mail valido.";
+        return;
+      }
+
+      const phoneDigits = digitsOnly(phoneInput.value);
+      if (phoneDigits.length < 10) {
+        feedback.classList.add("error");
+        feedback.textContent = "Informe um WhatsApp valido com DDD.";
+        return;
+      }
+
+      feedback.className = "booking-feedback ok";
+      feedback.textContent = "Confirmando seu agendamento...";
+
+      isSubmitting = true;
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.setAttribute("aria-busy", "true");
+      }
+      if (submitLabel) {
+        submitLabel.textContent = "Agendando...";
+      }
+
+      apiPost(config, "/public/book.php", {
+        name: nameInput.value.trim(),
+        email: emailInput.value.trim(),
+        phone: phoneDigits,
+        slot_start: slotStartInput.value
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(response.message || "Nao foi possivel agendar.");
+          }
+
+          feedback.className = "booking-feedback ok";
+          feedback.textContent = response.message || "Consulta agendada com sucesso.";
+          form.reset();
+
+          if (typeof config.clearSelectedSlot === "function") {
+            config.clearSelectedSlot();
+          }
+
+          if (typeof config.reloadCalendar === "function") {
+            return config.reloadCalendar();
+          }
+
+          return null;
+        })
+        .catch((error) => {
+          feedback.className = "booking-feedback error";
+          feedback.textContent = error.message;
+        })
+        .finally(() => {
+          isSubmitting = false;
+          if (submitButton) {
+            submitButton.disabled = false;
+            submitButton.removeAttribute("aria-busy");
+          }
+          if (submitLabel) {
+            submitLabel.textContent = "Confirmar agendamento";
+          }
+        });
+    });
+
+    return;
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      feedback.className = "booking-feedback";
+      feedback.textContent = "";
+
+      if (!slotStartInput.value) {
+        feedback.classList.add("error");
+        feedback.textContent = "Selecione um horário disponível antes de continuar.";
+        return;
+      }
+
+      if (!nameInput.value.trim() || !emailInput.value.trim() || !phoneInput.value.trim()) {
+        feedback.classList.add("error");
+        feedback.textContent = "Preencha nome, e-mail e WhatsApp.";
+        return;
+      }
+
+      const message =
+        `Olá! Gostaria de solicitar uma consulta.%0A%0A` +
+        `Nome: ${encodeURIComponent(nameInput.value.trim())}%0A` +
+        `E-mail: ${encodeURIComponent(emailInput.value.trim())}%0A` +
+        `WhatsApp: ${encodeURIComponent(phoneInput.value.trim())}%0A` +
+        `Horário escolhido: ${encodeURIComponent(slotStartInput.value)}`;
+
+      const phone = String(config.whatsappNumber || "").replace(/\D/g, "");
+      const url = `https://wa.me/${phone}?text=${message}`;
+
+      feedback.classList.add("ok");
+      feedback.textContent = "Redirecionando para o WhatsApp para confirmar seu pedido...";
+
+      window.open(url, "_blank", "noopener");
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    {
+    const appConfig = window.APP_CONFIG || {};
+    const config = {
+      brandName: appConfig.BRAND_NAME || "Dra. Ana Hain | Tricologia Curitiba",
+      whatsappUrl: appConfig.WHATSAPP_PUBLIC_URL || "",
+      instagramUrl: appConfig.INSTAGRAM_URL || "",
+      googleBusinessUrl: appConfig.GOOGLE_BUSINESS_URL || "",
+      apiBase: appConfig.API_BASE || "api",
+      whatsappMessage: "Ola! Gostaria de agendar uma avaliacao."
+    };
+
+    document.getElementById("footer-year").textContent = new Date().getFullYear();
+
+    setupMobileMenu();
+    setupRevealObserver();
+    setupMesojectVideo();
+    setupCounters();
+    setupPhoneMask();
+    setupPublicLinks(config);
+    setupVerse(config);
+    setupCalendar(config);
+    setupBookingForm(config);
+
+    const firstCard = document.querySelector("[data-result-card].active") || document.querySelector("[data-result-card]");
+    if (firstCard) {
+      setActiveBeforeAfterCard(firstCard);
+    }
+
+    const cards = document.querySelectorAll("[data-result-card]");
+    cards.forEach((card) => {
+      card.addEventListener("click", () => setActiveBeforeAfterCard(card));
+      card.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          setActiveBeforeAfterCard(card);
+        }
+      });
+    });
+
+    }
+    return;
+
+    const legacyConfig = window.LANDING_CONFIG || {
+      brandName: "Dra. Ana Hain",
+      whatsappNumber: "5541992645197",
+      whatsappMessage: "Olá! Gostaria de agendar uma avaliação.",
+      instagramUrl: "#",
+      googleBusinessUrl: "#",
+      dailyVerse: {
+        text: "Entreguem todas as suas preocupações a Deus, pois ele cuida de vocês.",
+        reference: "1 Pedro 5:7"
+      },
+      scheduleRulesText: "Agenda sujeita à confirmação da clínica.",
+      schedule: {
+        "2026-03-12": [
+          { label: "09:00", start: "12/03/2026 09:00", duration: "50 min" },
+          { label: "10:00", start: "12/03/2026 10:00", duration: "50 min" }
+        ],
+        "2026-03-13": [
+          { label: "14:00", start: "13/03/2026 14:00", duration: "50 min" },
+          { label: "15:00", start: "13/03/2026 15:00", duration: "50 min" }
+        ]
+      }
+    };
+
+    document.getElementById("footer-year").textContent = new Date().getFullYear();
+
+    setupMobileMenu();
+    setupRevealObserver();
+    setupMesojectVideo();
+    setupCounters();
+    setupPhoneMask();
+    setupPublicLinks(config);
+    setupVerse(config);
+    setupCalendar(config);
+    setupBookingForm(config);
+
+    const firstCard = document.querySelector("[data-result-card].active") || document.querySelector("[data-result-card]");
+    if (firstCard) {
+      setActiveBeforeAfterCard(firstCard);
+    }
+
+    const cards = document.querySelectorAll("[data-result-card]");
+    cards.forEach((card) => {
+      card.addEventListener("click", () => setActiveBeforeAfterCard(card));
+      card.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          setActiveBeforeAfterCard(card);
+        }
+      });
+    });
+  });
+  </script>
+
+  <script src="config.js"></script>
+  <script src="js/butterfly-cursor.js"></script>
+</body>
+</html>

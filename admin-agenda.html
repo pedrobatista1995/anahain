@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agenda e bloqueios</title>
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body data-admin-page="agenda">
+  <main class="erp-wrap">
+    <section class="admin-shell">
+      <aside class="admin-sidebar">
+        <div class="admin-brand">
+          <p class="eyebrow is-light">Painel médico</p>
+          <h1>Agenda e bloqueios</h1>
+          <p>Defina a disponibilidade semanal e bloqueie dias específicos com controle médico.</p>
+        </div>
+
+        <nav class="admin-nav">
+          <span class="admin-nav-group-title">Agenda</span>
+          <a class="admin-nav-link" data-page="dashboard" href="admin-dashboard.html">Dashboard</a>
+          <a class="admin-nav-link" data-page="agenda" href="admin-agenda.html">Agenda e bloqueios</a>
+          <a class="admin-nav-link" data-page="bookings" href="admin-atendimentos.html">Atendimentos</a>
+          <a class="admin-nav-link" data-page="records" href="admin-prontuarios.html">Prontuários</a>
+          <span class="admin-nav-group-title">Gestão</span>
+          <a class="admin-nav-link" data-page="metrics" href="admin-metricas.html">Métricas</a>
+          <a class="admin-nav-link" data-page="settings" href="admin-configuracoes.html">Clínica e agenda</a>
+          <a class="admin-nav-link" data-page="notifications" href="admin-notificacoes.html">Notificações</a>
+          <a class="admin-nav-link" data-page="security" href="admin-seguranca.html">Segurança</a>
+          <a class="admin-nav-link" data-page="leads" href="leads.html">Leads</a>
+        </nav>
+
+        <div class="sidebar-summary">
+          <article class="summary-card">
+            <span>Mês ativo</span>
+            <strong id="sidebar-report-month">--/----</strong>
+          </article>
+        </div>
+
+        <div class="sidebar-actions">
+          <button id="refresh-page" type="button">Atualizar</button>
+          <button id="logout-btn" type="button" class="ghost-btn ghost-btn-light">Sair</button>
+        </div>
+      </aside>
+
+      <section class="admin-main">
+        <header class="page-header">
+          <div>
+            <p class="eyebrow">Agenda</p>
+            <h2>Operação da agenda</h2>
+            <p class="page-description">Uma página só para disponibilidade recorrente e bloqueios específicos.</p>
+          </div>
+          <div class="page-toolbar">
+            <label for="report-month">Mês de referência</label>
+            <input id="report-month" type="month">
+            <button id="apply-report-month" type="button">Aplicar</button>
+          </div>
+        </header>
+
+        <div class="page-grid">
+          <section class="panel">
+            <div class="panel-heading">
+              <div>
+                <h3>Disponibilidade semanal</h3>
+                <p class="note">Base recorrente da agenda de atendimento.</p>
+              </div>
+            </div>
+            <form id="availability-form" novalidate>
+              <div id="availability-grid" class="availability-grid"></div>
+              <button type="submit">Salvar disponibilidade</button>
+            </form>
+            <p id="availability-feedback" class="note"></p>
+          </section>
+
+          <section class="panel">
+            <div class="panel-heading">
+              <div>
+                <h3>Bloqueio de dias</h3>
+                <p class="note">Bloqueie um dia inteiro e, se necessário, cancele automaticamente as consultas confirmadas.</p>
+              </div>
+            </div>
+
+            <form id="day-block-form" class="form" novalidate>
+              <label for="block-date">Data a bloquear</label>
+              <input id="block-date" type="date" required>
+
+              <label for="block-reason">Motivo do bloqueio</label>
+              <textarea id="block-reason" rows="4" placeholder="Ex.: congresso médico, ausência clínica, procedimento interno"></textarea>
+
+              <label class="toggle-line" for="block-cancel-existing">
+                <input id="block-cancel-existing" type="checkbox">
+                Cancelar as consultas confirmadas deste dia
+              </label>
+
+              <button id="save-day-block" type="submit">Bloquear dia</button>
+            </form>
+            <p id="day-block-feedback" class="note"></p>
+
+            <div class="subpanel">
+              <h4>Dias bloqueados no mês</h4>
+              <div id="day-blocks-list" class="day-blocks-list"></div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="js/admin-common.js"></script>
+  <script src="js/admin-agenda-page.js"></script>
+</body>
+</html>

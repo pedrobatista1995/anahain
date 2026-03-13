@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Atendimentos</title>
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body data-admin-page="bookings">
+  <main class="erp-wrap">
+    <section class="admin-shell">
+      <aside class="admin-sidebar">
+        <div class="admin-brand">
+          <p class="eyebrow is-light">Painel médico</p>
+          <h1>Atendimentos</h1>
+          <p>Operação das consultas em uma tela própria, separada do dashboard visual da agenda.</p>
+        </div>
+
+        <nav class="admin-nav">
+          <span class="admin-nav-group-title">Agenda</span>
+          <a class="admin-nav-link" data-page="dashboard" href="admin-dashboard.html">Dashboard</a>
+          <a class="admin-nav-link" data-page="agenda" href="admin-agenda.html">Agenda e bloqueios</a>
+          <a class="admin-nav-link" data-page="bookings" href="admin-atendimentos.html">Atendimentos</a>
+          <a class="admin-nav-link" data-page="records" href="admin-prontuarios.html">Prontuários</a>
+          <span class="admin-nav-group-title">Gestão</span>
+          <a class="admin-nav-link" data-page="metrics" href="admin-metricas.html">Métricas</a>
+          <a class="admin-nav-link" data-page="settings" href="admin-configuracoes.html">Clínica e agenda</a>
+          <a class="admin-nav-link" data-page="notifications" href="admin-notificacoes.html">Notificações</a>
+          <a class="admin-nav-link" data-page="security" href="admin-seguranca.html">Segurança</a>
+          <a class="admin-nav-link" data-page="leads" href="leads.html">Leads</a>
+        </nav>
+
+        <div class="sidebar-summary">
+          <article class="summary-card">
+            <span>Mês ativo</span>
+            <strong id="sidebar-report-month">--/----</strong>
+          </article>
+          <article class="summary-card">
+            <span>Consulta em foco</span>
+            <strong id="sidebar-selected-day">Nenhuma</strong>
+          </article>
+        </div>
+
+        <div class="sidebar-actions">
+          <button id="refresh-page" type="button">Atualizar</button>
+          <button id="logout-btn" type="button" class="ghost-btn ghost-btn-light">Sair</button>
+        </div>
+      </aside>
+
+      <section class="admin-main">
+        <header class="page-header">
+          <div>
+            <p class="eyebrow">Operação clínica</p>
+            <h2>Atendimentos do mês</h2>
+            <p class="page-description">Filtre as consultas do mês, veja o detalhe do atendimento e cancele individualmente quando necessário.</p>
+          </div>
+          <div class="page-toolbar">
+            <label for="report-month">Mês de referência</label>
+            <input id="report-month" type="month">
+            <button id="apply-report-month" type="button">Aplicar</button>
+          </div>
+        </header>
+
+        <p id="bookings-feedback" class="note"></p>
+
+        <section class="panel">
+          <div class="records-shell">
+            <aside class="records-sidebar">
+              <div class="filter-stack">
+                <div>
+                  <label for="bookings-search">Buscar paciente ou data</label>
+                  <input id="bookings-search" type="search" placeholder="Nome, e-mail, telefone ou data">
+                </div>
+                <div>
+                  <label for="bookings-status">Status</label>
+                  <select id="bookings-status">
+                    <option value="all">Todos</option>
+                    <option value="confirmed">Confirmadas</option>
+                    <option value="cancelled">Canceladas</option>
+                  </select>
+                </div>
+                <p id="bookings-list-summary" class="note"></p>
+              </div>
+              <div id="bookings-list" class="records-booking-list"></div>
+            </aside>
+
+            <section class="records-editor">
+              <div id="booking-empty" class="empty-state">
+                Selecione uma consulta na coluna ao lado para abrir os detalhes e ações.
+              </div>
+
+              <div id="booking-detail" class="hidden">
+                <article class="record-patient-card">
+                  <div>
+                    <span class="record-label">Paciente</span>
+                    <strong id="booking-patient-name">-</strong>
+                  </div>
+                  <div>
+                    <span class="record-label">Contato</span>
+                    <span id="booking-patient-contact">-</span>
+                  </div>
+                  <div>
+                    <span class="record-label">Consulta</span>
+                    <span id="booking-slot-date">-</span>
+                  </div>
+                  <div>
+                    <span class="record-label">Status</span>
+                    <span id="booking-status-badge" class="status-badge">-</span>
+                  </div>
+                </article>
+
+                <div class="detail-grid">
+                  <article class="detail-card">
+                    <span class="record-label">Resumo da consulta</span>
+                    <div class="detail-list">
+                      <div><strong>Horário</strong><span id="booking-slot-range">-</span></div>
+                      <div><strong>Criada em</strong><span id="booking-created-at">-</span></div>
+                      <div><strong>Cancelada em</strong><span id="booking-cancelled-at">-</span></div>
+                      <div><strong>Origem</strong><span id="booking-cancel-source">-</span></div>
+                    </div>
+                  </article>
+
+                  <article class="detail-card">
+                    <span class="record-label">Ações</span>
+                    <div class="stack-actions">
+                      <a id="booking-open-record" class="ghost-btn button-link" href="admin-prontuarios.html">Abrir prontuário</a>
+                    </div>
+                    <div id="booking-cancel-block" class="page-section-stack">
+                      <label for="booking-cancel-reason">Motivo do cancelamento</label>
+                      <select id="booking-cancel-reason"></select>
+                      <button id="booking-cancel-btn" type="button">Cancelar consulta</button>
+                    </div>
+                    <p id="booking-cancel-help" class="note"></p>
+                  </article>
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
+      </section>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="js/admin-common.js"></script>
+  <script src="js/admin-bookings-page.js"></script>
+</body>
+</html>
