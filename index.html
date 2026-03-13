@@ -651,49 +651,113 @@
   }
 
   .social-source-shell {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 16px;
-    margin-bottom: 18px;
-  }
-
-  .social-source-meta {
-    display: grid;
-    gap: 8px;
+    margin-bottom: 20px;
   }
 
   .social-kicker {
-    color: var(--text-faint);
+    color: #6b7280;
     font-size: 11px;
     letter-spacing: 0.16em;
     text-transform: uppercase;
   }
 
-  .social-rating-row {
+  .reviews-summary-card {
     display: flex;
     flex-wrap: wrap;
-    align-items: baseline;
-    gap: 14px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px 24px;
+    padding: 22px 24px;
+    border-radius: 18px;
+    background: #ececec;
+    color: #111827;
   }
 
-  .social-rating-value {
-    margin: 0;
-    color: #fff;
+  .reviews-summary-copy {
+    display: grid;
+    gap: 10px;
+  }
+
+  .reviews-summary-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #1f2937;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.04em;
+  }
+
+  .google-wordmark {
+    display: inline-flex;
+    align-items: center;
+    gap: 0;
     font-family: "Syne", sans-serif;
-    font-size: clamp(34px, 5vw, 48px);
+    letter-spacing: -0.06em;
+  }
+
+  .google-wordmark span:nth-child(1) { color: #4285f4; }
+  .google-wordmark span:nth-child(2) { color: #ea4335; }
+  .google-wordmark span:nth-child(3) { color: #fbbc05; }
+  .google-wordmark span:nth-child(4) { color: #4285f4; }
+  .google-wordmark span:nth-child(5) { color: #34a853; }
+  .google-wordmark span:nth-child(6) { color: #ea4335; }
+
+  .reviews-summary-rating {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .reviews-summary-value {
+    color: #111827;
+    font-family: "Syne", sans-serif;
+    font-size: 40px;
     line-height: 0.9;
     letter-spacing: -0.05em;
   }
 
-  .social-rating-copy {
-    color: var(--text-soft);
-    font-size: 14px;
-    line-height: 1.6;
+  .reviews-summary-stars {
+    color: #fbbc05;
+    font-size: 18px;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
   }
 
-  .social-card-grid,
+  .reviews-summary-count {
+    color: #6b7280;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .reviews-summary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 0 18px;
+    border-radius: 8px;
+    background: #1a73e8;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 180ms ease, transform 180ms ease;
+  }
+
+  .reviews-summary-button:hover {
+    background: #1765cc;
+    transform: translateY(-1px);
+  }
+
+  .social-card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
   .instagram-feed-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -710,7 +774,140 @@
     line-height: 1.7;
   }
 
-  .review-card,
+  .review-card {
+    min-height: 0;
+    padding: 22px;
+    display: grid;
+    align-content: start;
+    gap: 14px;
+    border: 0;
+    border-radius: 18px;
+    background: #ececec;
+    color: #111827;
+    overflow: hidden;
+  }
+
+  .review-card__header {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .review-card__avatar-wrap {
+    position: relative;
+    flex: 0 0 auto;
+    width: 48px;
+    height: 48px;
+  }
+
+  .review-card__avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #d1d5db, #f8fafc);
+    color: #1f2937;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .review-card__google-badge {
+    position: absolute;
+    right: -2px;
+    bottom: -2px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ececec;
+    border-radius: 999px;
+    background: #fff;
+    color: #4285f4;
+    font-size: 11px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .review-card__header-main {
+    min-width: 0;
+    display: grid;
+    gap: 6px;
+  }
+
+  .review-card__author-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .review-card__author {
+    display: block;
+    color: #111827;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+
+  .review-card__verified {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 999px;
+    background: #1a73e8;
+    font-size: 0;
+    line-height: 1;
+  }
+
+  .review-card__verified::before {
+    content: "";
+    width: 6px;
+    height: 3px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(-45deg) translateY(-1px);
+  }
+
+  .review-card__meta {
+    color: #6b7280;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .review-stars {
+    color: #fbbc05;
+    font-size: 16px;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+  }
+
+  .review-card__body {
+    margin: 0;
+    color: #4b5563;
+    font-size: 15px;
+    line-height: 1.68;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+  }
+
+  .review-card__link {
+    color: #6b7280;
+    font-size: 14px;
+    line-height: 1.4;
+    text-decoration: none;
+  }
+
+  .review-card__link:hover {
+    color: #1f2937;
+  }
+
   .instagram-card,
   .instagram-profile-card {
     border: 1px solid rgba(255,255,255,0.08);
@@ -719,65 +916,19 @@
     overflow: hidden;
   }
 
-  .review-card {
-    min-height: 240px;
-    padding: 20px;
-    display: grid;
-    align-content: start;
-    gap: 16px;
-  }
-
-  .review-card__top {
-    display: flex;
-    justify-content: space-between;
-    gap: 12px;
-    align-items: flex-start;
-  }
-
-  .review-card__author {
-    display: block;
-    color: #fff;
-    font-size: 16px;
-    line-height: 1.35;
-  }
-
-  .review-card__meta {
-    margin-top: 6px;
-    color: var(--text-faint);
-    font-size: 11px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-  }
-
-  .review-card__body {
-    margin: 0;
-    color: var(--text-soft);
-    font-size: 14px;
-    line-height: 1.75;
-  }
-
-  .review-stars {
-    color: var(--accent);
-    font-size: 13px;
-    letter-spacing: 0.18em;
-    white-space: nowrap;
-  }
-
   .instagram-profile-card {
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr) auto;
-    gap: 18px;
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: space-between;
+    gap: 16px 22px;
     padding: 20px;
     margin-bottom: 18px;
   }
 
-  .instagram-profile-card img {
-    width: 72px;
-    height: 72px;
-    border-radius: 999px;
-    object-fit: cover;
-    border: 1px solid rgba(255,255,255,0.12);
+  .instagram-profile-card__main {
+    display: grid;
+    gap: 8px;
   }
 
   .instagram-profile-card__title {
@@ -793,7 +944,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: 14px;
-    margin-top: 8px;
     color: var(--text-soft);
     font-size: 13px;
     line-height: 1.6;
@@ -802,15 +952,6 @@
   .instagram-profile-card__stats strong {
     color: #fff;
     font-weight: 600;
-  }
-
-  .instagram-profile-card__bio {
-    margin: 10px 0 0;
-    max-width: 56ch;
-    color: var(--text-soft);
-    font-size: 14px;
-    line-height: 1.7;
-    white-space: pre-line;
   }
 
   .instagram-card {
@@ -1044,7 +1185,8 @@
     .widget-body { padding: 16px; }
     .social-card-grid,
     .instagram-feed-grid { grid-template-columns: repeat(1, minmax(0, 1fr)); }
-    .instagram-profile-card { grid-template-columns: 1fr; }
+    .reviews-summary-card,
+    .instagram-profile-card { flex-direction: column; align-items: flex-start; }
 
     .contact-link { padding: 16px; }
 
@@ -1519,7 +1661,7 @@
           <div id="reviews-summary" class="social-source-shell">
             <div class="social-empty">Carregando avaliacoes publicas...</div>
           </div>
-          <div class="button-row" style="margin-bottom:16px;">
+          <div class="button-row reviews-action-row" style="margin-bottom:16px;" hidden>
             <a id="google-reviews-link" class="ghost-button" href="#" target="_blank" rel="noopener" data-track-event="click_google_reviews">Abrir no Google</a>
             <a id="doctoralia-reviews-link" class="ghost-button" href="#" target="_blank" rel="noopener">Abrir no Doctoralia</a>
           </div>

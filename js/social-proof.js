@@ -54,6 +54,11 @@
     return value.slice(0, Math.max(0, maxLength - 3)).trim() + "...";
   }
 
+  function authorInitial(name) {
+    var value = String(name || "").trim();
+    return value ? value.charAt(0).toUpperCase() : "G";
+  }
+
   function renderReviewStars(rating) {
     var rounded = Math.max(0, Math.min(5, Math.round(Number(rating || 0))));
     if (!rounded) return "";
@@ -97,19 +102,29 @@
       : "--";
     var reviewCount = Number(payload.review_count || 0);
     var staleLabel = payload.stale ? " - cache local" : "";
+    var primaryHref = sourceName === "google" ? googleHref : (cfg.DOCTORALIA_URL || googleHref || "#");
+    var primaryLabel = sourceName === "google" ? "Ver no Google" : "Ver no Doctoralia";
     var countCopy = sourceName === "google"
-      ? "avaliacoes publicas no Google"
-      : "opinioes publicas de pacientes";
+      ? "(" + reviewCount.toLocaleString("pt-BR") + ")"
+      : reviewCount.toLocaleString("pt-BR") + " opinioes publicas";
+    var summaryTitle = sourceName === "google"
+      ? '<span class="google-wordmark"><span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span></span> <span>Reviews</span>'
+      : "Avaliacoes publicas";
 
     summary.innerHTML = [
-      '<div class="social-source-shell">',
-      '  <div class="social-source-meta">',
-      '    <span class="social-kicker">Fonte principal: ' + escapeHtml(payload.source_label || "Doctoralia") + staleLabel + "</span>",
-      '    <div class="social-rating-row">',
-      '      <strong class="social-rating-value">' + escapeHtml(rating) + "</strong>",
-      '      <div class="social-rating-copy">' + escapeHtml(reviewCount.toLocaleString("pt-BR")) + " " + escapeHtml(countCopy) + "</div>",
+      '<div class="reviews-summary-card">',
+      '  <div class="reviews-summary-copy">',
+      '    <span class="social-kicker">' + escapeHtml(sourceName === "google" ? "Fonte Google" : (payload.source_label || "Fonte publica")) + staleLabel + "</span>",
+      '    <div class="reviews-summary-title">' + summaryTitle + "</div>",
+      '    <div class="reviews-summary-rating">',
+      '      <strong class="reviews-summary-value">' + escapeHtml(rating) + "</strong>",
+      '      <span class="reviews-summary-stars">' + escapeHtml(renderReviewStars(payload.rating)) + "</span>",
+      '      <span class="reviews-summary-count">' + escapeHtml(countCopy) + "</span>",
       "    </div>",
       "  </div>",
+      (primaryHref
+        ? '  <a class="reviews-summary-button" href="' + escapeHtml(primaryHref) + '" target="_blank" rel="noopener">' + escapeHtml(primaryLabel) + "</a>"
+        : ""),
       "</div>"
     ].join("");
 
@@ -136,14 +151,24 @@
 
       return [
         '<article class="review-card">',
-        '  <div class="review-card__top">',
-        "    <div>",
-        '      <strong class="review-card__author">' + author + "</strong>",
-        '      <div class="review-card__meta">' + (metaParts.join(" / ") || "Avaliacao publica") + "</div>",
+        '  <div class="review-card__header">',
+        '    <div class="review-card__avatar-wrap">',
+        '      <div class="review-card__avatar">' + escapeHtml(authorInitial(review.author)) + "</div>",
+        (sourceName === "google" ? '      <span class="review-card__google-badge">G</span>' : ""),
         "    </div>",
-        '    <span class="review-stars">' + escapeHtml(renderReviewStars(review.rating)) + "</span>",
+        '    <div class="review-card__header-main">',
+        '      <div class="review-card__author-row">',
+        '        <strong class="review-card__author">' + author + "</strong>",
+        (sourceName === "google" ? '        <span class="review-card__verified" aria-hidden="true"></span>' : ""),
+        "      </div>",
+        '      <div class="review-card__meta">' + (metaParts.join(" / ") || "Avaliacao publica") + "</div>",
+        '      <span class="review-stars">' + escapeHtml(renderReviewStars(review.rating)) + "</span>",
+        "    </div>",
         "  </div>",
-        '  <p class="review-card__body">' + escapeHtml(trimText(review.body || "", 260)) + "</p>",
+        '  <p class="review-card__body">' + escapeHtml(review.body || "") + "</p>",
+        ((review.profile_url || primaryHref)
+          ? '  <a class="review-card__link" href="' + escapeHtml(review.profile_url || primaryHref) + '" target="_blank" rel="noopener">Ler review</a>'
+          : ""),
         "</article>"
       ].join("");
     }).join("");
@@ -161,24 +186,20 @@
     }
 
     var profile = payload.profile;
-    var title = profile.full_name || ("@" + (profile.username || ""));
+    var title = profile.username ? ("@" + profile.username) : (profile.full_name || "Instagram");
     var staleLabel = payload.stale ? " - cache local" : "";
     var profileUrl = cfg.INSTAGRAM_URL || payload.source_url || "#";
 
     profileShell.innerHTML = [
       '<div class="instagram-profile-card">',
-      '  <img alt="' + escapeHtml(title) + '" loading="lazy" src="' + escapeHtml(proxiedImageUrl(profile.profile_pic_url || "")) + '">',
-      "  <div>",
-      '    <div class="social-kicker">Instagram publico' + staleLabel + "</div>",
+      '  <div class="instagram-profile-card__main">',
       '    <strong class="instagram-profile-card__title">' + escapeHtml(title) + "</strong>",
       '    <div class="instagram-profile-card__stats">',
       '      <span><strong>' + escapeHtml(compactNumber(profile.followers)) + "</strong> seguidores</span>",
       '      <span><strong>' + escapeHtml(compactNumber(profile.posts)) + "</strong> posts</span>",
-      (profile.category_name ? '      <span>' + escapeHtml(profile.category_name) + "</span>" : ""),
       "    </div>",
-      (profile.biography ? '    <p class="instagram-profile-card__bio">' + escapeHtml(profile.biography) + "</p>" : ""),
       "  </div>",
-      '  <div><a class="ghost-button" href="' + escapeHtml(profileUrl) + '" target="_blank" rel="noopener">Abrir perfil</a></div>',
+      '  <a class="ghost-button" href="' + escapeHtml(profileUrl) + '" target="_blank" rel="noopener">Abrir perfil</a>',
       "</div>"
     ].join("");
 
