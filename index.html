@@ -1025,6 +1025,81 @@
     gap: 12px;
   }
 
+  .butterfly-cursor {
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    width: 42px;
+    height: 32px;
+    display: none;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 2147483647;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 180ms ease, visibility 180ms ease;
+  }
+
+  body.js-ready {
+    cursor: none;
+  }
+
+  body.js-ready .butterfly-cursor {
+    display: block;
+  }
+
+  .butterfly-cursor.is-visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .butterfly-cursor .body {
+    position: absolute;
+    left: 50%;
+    top: 8px;
+    width: 7px;
+    height: 20px;
+    transform: translateX(-50%);
+    border-radius: 999px;
+    background: linear-gradient(180deg, #7f6313, #4d3b08);
+  }
+
+  .butterfly-cursor .wing {
+    position: absolute;
+    top: 10px;
+    width: 18px;
+    height: 16px;
+    border: 1px solid #8a6a15;
+    background: radial-gradient(circle at 30% 40%, #eccd74 0%, #c49a22 56%, #9a7715 100%);
+    box-shadow: 0 0 12px rgba(196, 154, 34, 0.18);
+  }
+
+  .butterfly-cursor .wing-left {
+    left: 2px;
+    border-radius: 86% 52% 74% 40%;
+    transform-origin: right center;
+    animation: flap-left .55s ease-in-out infinite;
+  }
+
+  .butterfly-cursor .wing-right {
+    right: 2px;
+    border-radius: 52% 86% 40% 74%;
+    transform-origin: left center;
+    animation: flap-right .55s ease-in-out infinite .05s;
+  }
+
+  @keyframes flap-left {
+    0% { transform: rotate(-22deg); }
+    50% { transform: rotate(16deg); }
+    100% { transform: rotate(-22deg); }
+  }
+
+  @keyframes flap-right {
+    0% { transform: rotate(22deg); }
+    50% { transform: rotate(-16deg); }
+    100% { transform: rotate(22deg); }
+  }
+
   .ghost-button {
     display: inline-flex;
     align-items: center;
@@ -1187,6 +1262,10 @@
     .instagram-feed-grid { grid-template-columns: repeat(1, minmax(0, 1fr)); }
     .reviews-summary-card,
     .instagram-profile-card { flex-direction: column; align-items: flex-start; }
+    .butterfly-cursor {
+      width: 36px;
+      height: 28px;
+    }
 
     .contact-link { padding: 16px; }
 
