@@ -21,7 +21,14 @@ session_start();
 
 date_default_timezone_set('America/Sao_Paulo');
 
-$dbDir = dirname(__DIR__) . DIRECTORY_SEPARATOR . 'data';
+$configuredDataDir = trim((string) (getenv('MEDICAL_DATA_DIR') ?: ''));
+if ($configuredDataDir === '') {
+    $configuredDataDir = dirname(__DIR__) . DIRECTORY_SEPARATOR . 'data';
+}
+$dbDir = rtrim(str_replace(['/', '\\'], DIRECTORY_SEPARATOR, $configuredDataDir), DIRECTORY_SEPARATOR);
+if ($dbDir === '') {
+    $dbDir = dirname(__DIR__) . DIRECTORY_SEPARATOR . 'data';
+}
 $dbPath = $dbDir . DIRECTORY_SEPARATOR . 'app.sqlite';
 if (!is_dir($dbDir)) {
     mkdir($dbDir, 0755, true);
@@ -73,6 +80,21 @@ function sanitize_phone(string $phone): string {
 
 function get_client_ip(): string {
     return $_SERVER['REMOTE_ADDR'] ?? '0.0.0.0';
+}
+
+function app_data_dir(): string {
+    global $dbDir;
+    return $dbDir;
+}
+
+function app_data_path(string $relativePath = ''): string {
+    $dir = app_data_dir();
+    if ($relativePath === '') {
+        return $dir;
+    }
+
+    $normalized = ltrim(str_replace(['/', '\\'], DIRECTORY_SEPARATOR, $relativePath), DIRECTORY_SEPARATOR);
+    return $dir . DIRECTORY_SEPARATOR . $normalized;
 }
 
 function ensure_schema(PDO $pdo): void {

@@ -1,0 +1,9 @@
+.git
+.gitignore
+data/app.sqlite
+data/app.sqlite.initial-admin.txt
+data/verse-cache.json
+tmp-*.png
+_mobile-home.png
+_tablet-home.png
+_test.txt

@@ -3,7 +3,7 @@ require_once dirname(__DIR__) . '/bootstrap.php';
 require_get();
 
 $sourceUrl = 'https://www.bible.com/pt/verse-of-the-day?day=70';
-$cachePath = dirname(__DIR__, 2) . '/data/verse-cache.json';
+$cachePath = app_data_path('verse-cache.json');
 $today = date('Y-m-d');
 
 function read_cached_verse(string $path): ?array {
