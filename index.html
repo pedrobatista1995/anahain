@@ -1029,15 +1029,15 @@
     position: fixed;
     top: 50vh;
     left: 50vw;
-    width: 30px;
-    height: 24px;
+    width: 28px;
+    height: 28px;
     display: none;
     pointer-events: none;
     transform: translate(-50%, -50%);
     z-index: 2147483647;
     opacity: 0;
     visibility: hidden;
-    filter: drop-shadow(0 6px 12px rgba(196, 154, 34, 0.18));
+    filter: drop-shadow(0 8px 14px rgba(196, 154, 34, 0.16));
     transition: opacity 140ms ease, visibility 140ms ease, transform 120ms ease;
     will-change: left, top, transform, opacity;
   }
@@ -1060,75 +1060,88 @@
     visibility: visible;
   }
 
-  .butterfly-cursor.is-touch-active {
-    transform: translate(-50%, -50%) scale(0.96);
+  .butterfly-svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
   }
 
-  .butterfly-cursor .body {
-    position: absolute;
-    left: 50%;
-    top: 5px;
-    width: 5px;
-    height: 15px;
-    transform: translateX(-50%);
-    border-radius: 999px;
-    background: linear-gradient(180deg, #7a6014, #4b3a08);
+  .butterfly-shadow {
+    fill: rgba(94, 72, 14, 0.18);
+    filter: blur(1.8px);
   }
 
-  .butterfly-cursor .wing {
-    position: absolute;
-    top: 7px;
-    width: 13px;
-    height: 12px;
-    border: 1px solid #8a6a15;
-    background: radial-gradient(circle at 30% 38%, #efd885 0%, #caa12a 56%, #987614 100%);
-    box-shadow: 0 0 10px rgba(196, 154, 34, 0.12);
+  .butterfly-outline,
+  .butterfly-body-line,
+  .butterfly-antenna {
+    fill: none;
+    stroke: #d6b04f;
+    stroke-linecap: round;
+    stroke-linejoin: round;
   }
 
-  .butterfly-cursor .wing-left {
-    left: 1px;
-    border-radius: 86% 52% 74% 40%;
+  .butterfly-outline {
+    stroke-width: 2.4;
+  }
+
+  .butterfly-body-line {
+    stroke-width: 2.1;
+  }
+
+  .butterfly-antenna {
+    stroke-width: 1.7;
+    opacity: 0.92;
+  }
+
+  .butterfly-head {
+    fill: #d6b04f;
+  }
+
+  .butterfly-wing-fill {
+    fill: rgba(214, 176, 79, 0.06);
+  }
+
+  .wing-left-group,
+  .wing-right-group {
+    transform-box: fill-box;
+    will-change: transform;
+  }
+
+  .wing-left-group {
     transform-origin: right center;
-    animation: flap-left .55s ease-in-out infinite;
   }
 
-  .butterfly-cursor .wing-right {
-    right: 1px;
-    border-radius: 52% 86% 40% 74%;
+  .wing-right-group {
     transform-origin: left center;
-    animation: flap-right .55s ease-in-out infinite .05s;
   }
 
-  .butterfly-cursor .antenna {
-    position: absolute;
-    top: 2px;
-    width: 8px;
-    height: 6px;
-    border-top: 1px solid rgba(138, 106, 21, 0.9);
+  .butterfly-cursor .wing-left-group {
+    animation: flap-left 0.9s ease-in-out infinite;
   }
 
-  .butterfly-cursor .antenna-left {
-    left: 11px;
-    border-radius: 100% 0 0 0;
-    transform: rotate(-22deg);
+  .butterfly-cursor .wing-right-group {
+    animation: flap-right 0.9s ease-in-out infinite 0.04s;
   }
 
-  .butterfly-cursor .antenna-right {
-    right: 11px;
-    border-radius: 0 100% 0 0;
-    transform: rotate(22deg);
+  .butterfly-cursor .butterfly-core {
+    animation: butterfly-bob 1.8s ease-in-out infinite;
   }
 
   @keyframes flap-left {
-    0% { transform: rotate(-22deg); }
-    50% { transform: rotate(16deg); }
-    100% { transform: rotate(-22deg); }
+    0% { transform: rotate(-8deg) translateY(0); }
+    50% { transform: rotate(5deg) translateY(-0.5px); }
+    100% { transform: rotate(-8deg) translateY(0); }
   }
 
   @keyframes flap-right {
-    0% { transform: rotate(22deg); }
-    50% { transform: rotate(-16deg); }
-    100% { transform: rotate(22deg); }
+    0% { transform: rotate(8deg) translateY(0); }
+    50% { transform: rotate(-5deg) translateY(-0.5px); }
+    100% { transform: rotate(8deg) translateY(0); }
+  }
+
+  @keyframes butterfly-bob {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-1px); }
   }
 
   .ghost-button {
@@ -1294,8 +1307,8 @@
     .reviews-summary-card,
     .instagram-profile-card { flex-direction: column; align-items: flex-start; }
     .butterfly-cursor {
-      width: 26px;
-      height: 20px;
+      width: 24px;
+      height: 24px;
     }
 
     .contact-link { padding: 16px; }

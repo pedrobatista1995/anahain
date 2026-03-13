@@ -14,11 +14,23 @@
     el.className = "butterfly-cursor";
     el.setAttribute("aria-hidden", "true");
     el.innerHTML = [
-      '<span class="antenna antenna-left"></span>',
-      '<span class="antenna antenna-right"></span>',
-      '<span class="wing wing-left"></span>',
-      '<span class="body"></span>',
-      '<span class="wing wing-right"></span>'
+      '<svg class="butterfly-svg" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">',
+      '  <ellipse class="butterfly-shadow" cx="24" cy="40" rx="8.5" ry="2.2"></ellipse>',
+      '  <g class="butterfly-core">',
+      '    <g class="wing-left-group">',
+      '      <path class="butterfly-wing-fill" d="M24 18C18 10 10 8 7 13C4 18 7 26 14 26C10 29 10 35 15 38C20 40 23 34 24 23Z"></path>',
+      '      <path class="butterfly-outline" d="M24 18C18 10 10 8 7 13C4 18 7 26 14 26C10 29 10 35 15 38C20 40 23 34 24 23"></path>',
+      '    </g>',
+      '    <g class="wing-right-group">',
+      '      <path class="butterfly-wing-fill" d="M24 18C30 10 38 8 41 13C44 18 41 26 34 26C38 29 38 35 33 38C28 40 25 34 24 23Z"></path>',
+      '      <path class="butterfly-outline" d="M24 18C30 10 38 8 41 13C44 18 41 26 34 26C38 29 38 35 33 38C28 40 25 34 24 23"></path>',
+      '    </g>',
+      '    <path class="butterfly-body-line" d="M24 14L24 33"></path>',
+      '    <path class="butterfly-antenna" d="M24 14C22 10 19 8 16 7"></path>',
+      '    <path class="butterfly-antenna" d="M24 14C26 10 29 8 32 7"></path>',
+      '    <circle class="butterfly-head" cx="24" cy="14" r="2.2"></circle>',
+      '  </g>',
+      '</svg>'
     ].join("");
     document.body.appendChild(el);
     return el;
