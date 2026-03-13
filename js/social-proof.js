@@ -202,6 +202,11 @@
   }
 
   document.addEventListener("DOMContentLoaded", function () {
+    var reviewsTitle = document.querySelector("#reviews .section-title");
+    if (reviewsTitle) {
+      reviewsTitle.textContent = "Avaliacoes publicas";
+    }
+
     loadReviews();
     loadInstagram();
   });
