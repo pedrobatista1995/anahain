@@ -14,6 +14,11 @@
     });
   }
 
+  function proxiedImageUrl(url) {
+    if (!url) return "";
+    return apiBase + "/public/media_proxy.php?url=" + encodeURIComponent(url);
+  }
+
   function escapeHtml(value) {
     return String(value || "")
       .replace(/&/g, "&amp;")
@@ -52,7 +57,7 @@
   function renderReviewStars(rating) {
     var rounded = Math.max(0, Math.min(5, Math.round(Number(rating || 0))));
     if (!rounded) return "";
-    return new Array(rounded + 1).join("★");
+    return new Array(rounded + 1).join(String.fromCharCode(9733));
   }
 
   function renderReviews(payload) {
@@ -73,12 +78,12 @@
 
     var rating = payload.rating != null ? String(payload.rating).replace(".", ",") : "--";
     var reviewCount = Number(payload.review_count || 0);
-    var staleLabel = payload.stale ? " • cache local" : "";
+    var staleLabel = payload.stale ? " - cache local" : "";
 
     summary.innerHTML = [
       '<div class="social-source-shell">',
       '  <div class="social-source-meta">',
-      '    <span class="social-kicker">Fonte principal: ' + escapeHtml(payload.source_label || "Doctoralia") + staleLabel + '</span>',
+      '    <span class="social-kicker">Fonte principal: ' + escapeHtml(payload.source_label || "Doctoralia") + staleLabel + "</span>",
       '    <div class="social-rating-row">',
       '      <strong class="social-rating-value">' + escapeHtml(rating) + "</strong>",
       '      <div class="social-rating-copy">' + escapeHtml(reviewCount.toLocaleString("pt-BR")) + " opinioes publicas de pacientes</div>",
@@ -102,9 +107,9 @@
       return [
         '<article class="review-card">',
         '  <div class="review-card__top">',
-        '    <div>',
+        "    <div>",
         '      <strong class="review-card__author">' + author + "</strong>",
-        '      <div class="review-card__meta">' + (metaParts.join(" • ") || "Avaliacao publica") + "</div>",
+        '      <div class="review-card__meta">' + (metaParts.join(" / ") || "Avaliacao publica") + "</div>",
         "    </div>",
         '    <span class="review-stars">' + escapeHtml(renderReviewStars(review.rating)) + "</span>",
         "  </div>",
@@ -127,13 +132,13 @@
 
     var profile = payload.profile;
     var title = profile.full_name || ("@" + (profile.username || ""));
-    var staleLabel = payload.stale ? " • cache local" : "";
+    var staleLabel = payload.stale ? " - cache local" : "";
     var profileUrl = cfg.INSTAGRAM_URL || payload.source_url || "#";
 
     profileShell.innerHTML = [
       '<div class="instagram-profile-card">',
-      '  <img alt="' + escapeHtml(title) + '" loading="lazy" referrerpolicy="no-referrer" src="' + escapeHtml(profile.profile_pic_url || "") + '">',
-      '  <div>',
+      '  <img alt="' + escapeHtml(title) + '" loading="lazy" src="' + escapeHtml(proxiedImageUrl(profile.profile_pic_url || "")) + '">',
+      "  <div>",
       '    <div class="social-kicker">Instagram publico' + staleLabel + "</div>",
       '    <strong class="instagram-profile-card__title">' + escapeHtml(title) + "</strong>",
       '    <div class="instagram-profile-card__stats">',
@@ -161,7 +166,7 @@
 
       return [
         '<a class="instagram-card" href="' + escapeHtml(post.permalink || profileUrl) + '" target="_blank" rel="noopener">',
-        '  <img class="instagram-card__media" alt="' + escapeHtml(trimText(post.caption || title, 120)) + '" loading="lazy" referrerpolicy="no-referrer" src="' + escapeHtml(post.image_url || "") + '">',
+        '  <img class="instagram-card__media" alt="' + escapeHtml(trimText(post.caption || title, 120)) + '" loading="lazy" src="' + escapeHtml(proxiedImageUrl(post.image_url || "")) + '">',
         '  <div class="instagram-card__content">',
         '    <div class="instagram-card__meta">',
         '      <span class="instagram-card__badge">' + escapeHtml(meta[0]) + "</span>",
