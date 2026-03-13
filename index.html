@@ -1029,19 +1029,26 @@
     position: fixed;
     top: 50vh;
     left: 50vw;
-    width: 42px;
-    height: 32px;
+    width: 30px;
+    height: 24px;
     display: none;
     pointer-events: none;
     transform: translate(-50%, -50%);
     z-index: 2147483647;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 180ms ease, visibility 180ms ease;
+    filter: drop-shadow(0 6px 12px rgba(196, 154, 34, 0.18));
+    transition: opacity 140ms ease, visibility 140ms ease, transform 120ms ease;
+    will-change: left, top, transform, opacity;
   }
 
   body.js-ready {
     cursor: none;
+  }
+
+  body.js-ready,
+  body.js-ready * {
+    cursor: none !important;
   }
 
   body.js-ready .butterfly-cursor {
@@ -1053,39 +1060,63 @@
     visibility: visible;
   }
 
+  .butterfly-cursor.is-touch-active {
+    transform: translate(-50%, -50%) scale(0.96);
+  }
+
   .butterfly-cursor .body {
     position: absolute;
     left: 50%;
-    top: 8px;
-    width: 7px;
-    height: 20px;
+    top: 5px;
+    width: 5px;
+    height: 15px;
     transform: translateX(-50%);
     border-radius: 999px;
-    background: linear-gradient(180deg, #7f6313, #4d3b08);
+    background: linear-gradient(180deg, #7a6014, #4b3a08);
   }
 
   .butterfly-cursor .wing {
     position: absolute;
-    top: 10px;
-    width: 18px;
-    height: 16px;
+    top: 7px;
+    width: 13px;
+    height: 12px;
     border: 1px solid #8a6a15;
-    background: radial-gradient(circle at 30% 40%, #eccd74 0%, #c49a22 56%, #9a7715 100%);
-    box-shadow: 0 0 12px rgba(196, 154, 34, 0.18);
+    background: radial-gradient(circle at 30% 38%, #efd885 0%, #caa12a 56%, #987614 100%);
+    box-shadow: 0 0 10px rgba(196, 154, 34, 0.12);
   }
 
   .butterfly-cursor .wing-left {
-    left: 2px;
+    left: 1px;
     border-radius: 86% 52% 74% 40%;
     transform-origin: right center;
     animation: flap-left .55s ease-in-out infinite;
   }
 
   .butterfly-cursor .wing-right {
-    right: 2px;
+    right: 1px;
     border-radius: 52% 86% 40% 74%;
     transform-origin: left center;
     animation: flap-right .55s ease-in-out infinite .05s;
+  }
+
+  .butterfly-cursor .antenna {
+    position: absolute;
+    top: 2px;
+    width: 8px;
+    height: 6px;
+    border-top: 1px solid rgba(138, 106, 21, 0.9);
+  }
+
+  .butterfly-cursor .antenna-left {
+    left: 11px;
+    border-radius: 100% 0 0 0;
+    transform: rotate(-22deg);
+  }
+
+  .butterfly-cursor .antenna-right {
+    right: 11px;
+    border-radius: 0 100% 0 0;
+    transform: rotate(22deg);
   }
 
   @keyframes flap-left {
@@ -1263,8 +1294,8 @@
     .reviews-summary-card,
     .instagram-profile-card { flex-direction: column; align-items: flex-start; }
     .butterfly-cursor {
-      width: 36px;
-      height: 28px;
+      width: 26px;
+      height: 20px;
     }
 
     .contact-link { padding: 16px; }

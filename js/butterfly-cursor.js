@@ -1,11 +1,12 @@
 (function () {
   "use strict";
 
-  var CURSOR_OFFSET_X = 21;
-  var CURSOR_OFFSET_Y = 16;
-
   function prefersReducedMotion() {
     return !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+  }
+
+  function hasFinePointer() {
+    return !!(window.matchMedia && (window.matchMedia("(any-pointer: fine)").matches || window.matchMedia("(pointer: fine)").matches));
   }
 
   function createButterfly() {
@@ -13,6 +14,8 @@
     el.className = "butterfly-cursor";
     el.setAttribute("aria-hidden", "true");
     el.innerHTML = [
+      '<span class="antenna antenna-left"></span>',
+      '<span class="antenna antenna-right"></span>',
       '<span class="wing wing-left"></span>',
       '<span class="body"></span>',
       '<span class="wing wing-right"></span>'
@@ -32,6 +35,8 @@
     var currentY = targetY;
     var rafId = 0;
     var hideTimer = 0;
+    var touchMode = false;
+    var currentAngle = 0;
 
     document.body.classList.add("js-ready");
 
@@ -39,9 +44,22 @@
       butterfly.classList.toggle("is-visible", !!flag);
     }
 
-    function place(x, y) {
+    function syncCursorMode() {
+      if (touchMode) {
+        document.documentElement.classList.remove("butterfly-enabled");
+        butterfly.classList.add("is-touch-active");
+      } else {
+        if (hasFinePointer()) {
+          document.documentElement.classList.add("butterfly-enabled");
+        }
+        butterfly.classList.remove("is-touch-active");
+      }
+    }
+
+    function place(x, y, angle) {
       butterfly.style.left = x + "px";
       butterfly.style.top = y + "px";
+      butterfly.style.transform = "translate(-50%, -50%) rotate(" + angle + "deg)" + (touchMode ? " scale(0.96)" : "");
     }
 
     function updateTarget(x, y, immediate) {
@@ -52,7 +70,8 @@
       if (immediate || reducedMotion) {
         currentX = x;
         currentY = y;
-        place(currentX, currentY);
+        currentAngle = 0;
+        place(currentX, currentY, currentAngle);
       }
     }
 
@@ -70,18 +89,25 @@
     }
 
     function animate() {
-      currentX += (targetX - currentX) * 0.2;
-      currentY += (targetY - currentY) * 0.2;
-      place(currentX, currentY);
+      currentX += (targetX - currentX) * 0.24;
+      currentY += (targetY - currentY) * 0.24;
+      currentAngle += (((targetX - currentX) * 0.08) - currentAngle) * 0.18;
+      if (currentAngle > 10) currentAngle = 10;
+      if (currentAngle < -10) currentAngle = -10;
+      place(currentX, currentY, currentAngle);
       rafId = window.requestAnimationFrame(animate);
     }
 
     window.addEventListener("mousemove", function (event) {
+      touchMode = false;
+      syncCursorMode();
       clearHideTimer();
       updateTarget(event.clientX, event.clientY, false);
     }, { passive: true });
 
     window.addEventListener("mousedown", function (event) {
+      touchMode = false;
+      syncCursorMode();
       clearHideTimer();
       updateTarget(event.clientX, event.clientY, true);
     }, { passive: true });
@@ -109,6 +135,8 @@
     window.addEventListener("touchstart", function (event) {
       var touch = event.touches && event.touches[0];
       if (!touch) return;
+      touchMode = true;
+      syncCursorMode();
       clearHideTimer();
       updateTarget(touch.clientX, touch.clientY, true);
     }, { passive: true });
@@ -116,6 +144,8 @@
     window.addEventListener("touchmove", function (event) {
       var touch = event.touches && event.touches[0];
       if (!touch) return;
+      touchMode = true;
+      syncCursorMode();
       clearHideTimer();
       updateTarget(touch.clientX, touch.clientY, true);
     }, { passive: true });
@@ -124,13 +154,11 @@
     window.addEventListener("touchcancel", scheduleTouchHide, { passive: true });
 
     if (reducedMotion) {
-      place(currentX, currentY);
+      place(currentX, currentY, 0);
     } else {
       rafId = window.requestAnimationFrame(animate);
     }
-
-    butterfly.style.marginLeft = "-" + CURSOR_OFFSET_X + "px";
-    butterfly.style.marginTop = "-" + CURSOR_OFFSET_Y + "px";
+    syncCursorMode();
 
     window.addEventListener("beforeunload", function () {
       if (rafId) {
