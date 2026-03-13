@@ -650,6 +650,234 @@
     padding: 22px;
   }
 
+  .social-source-shell {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 18px;
+  }
+
+  .social-source-meta {
+    display: grid;
+    gap: 8px;
+  }
+
+  .social-kicker {
+    color: var(--text-faint);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .social-rating-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 14px;
+  }
+
+  .social-rating-value {
+    margin: 0;
+    color: #fff;
+    font-family: "Syne", sans-serif;
+    font-size: clamp(34px, 5vw, 48px);
+    line-height: 0.9;
+    letter-spacing: -0.05em;
+  }
+
+  .social-rating-copy {
+    color: var(--text-soft);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .social-card-grid,
+  .instagram-feed-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .social-empty {
+    padding: 18px;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 24px;
+    background: rgba(255,255,255,0.03);
+    color: var(--text-soft);
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .review-card,
+  .instagram-card,
+  .instagram-profile-card {
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 24px;
+    background: rgba(255,255,255,0.03);
+    overflow: hidden;
+  }
+
+  .review-card {
+    min-height: 240px;
+    padding: 20px;
+    display: grid;
+    align-content: start;
+    gap: 16px;
+  }
+
+  .review-card__top {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .review-card__author {
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.35;
+  }
+
+  .review-card__meta {
+    margin-top: 6px;
+    color: var(--text-faint);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .review-card__body {
+    margin: 0;
+    color: var(--text-soft);
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .review-stars {
+    color: var(--accent);
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    white-space: nowrap;
+  }
+
+  .instagram-profile-card {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 18px;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 18px;
+  }
+
+  .instagram-profile-card img {
+    width: 72px;
+    height: 72px;
+    border-radius: 999px;
+    object-fit: cover;
+    border: 1px solid rgba(255,255,255,0.12);
+  }
+
+  .instagram-profile-card__title {
+    display: block;
+    color: #fff;
+    font-family: "Syne", sans-serif;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: -0.04em;
+  }
+
+  .instagram-profile-card__stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 8px;
+    color: var(--text-soft);
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .instagram-profile-card__stats strong {
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .instagram-profile-card__bio {
+    margin: 10px 0 0;
+    max-width: 56ch;
+    color: var(--text-soft);
+    font-size: 14px;
+    line-height: 1.7;
+    white-space: pre-line;
+  }
+
+  .instagram-card {
+    position: relative;
+    min-height: 340px;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .instagram-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(9, 9, 9, 0.04), rgba(9, 9, 9, 0.82));
+    z-index: 1;
+  }
+
+  .instagram-card__media {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .instagram-card__content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 16px;
+    display: grid;
+    gap: 10px;
+  }
+
+  .instagram-card__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 12px;
+    color: rgba(255,255,255,0.78);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .instagram-card__badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 26px;
+    padding: 0 10px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.12);
+    color: #fff;
+  }
+
+  .instagram-card__caption {
+    margin: 0;
+    color: #fff;
+    font-size: 13px;
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
   .button-row {
     display: flex;
     flex-wrap: wrap;
@@ -814,6 +1042,9 @@
     .section { padding: 24px 16px; }
 
     .widget-body { padding: 16px; }
+    .social-card-grid,
+    .instagram-feed-grid { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+    .instagram-profile-card { grid-template-columns: 1fr; }
 
     .contact-link { padding: 16px; }
 
@@ -1285,10 +1516,16 @@
       </div>
       <div class="widget-shell group" data-reveal>
         <div class="widget-body">
-          <div class="button-row" style="margin-bottom:16px;">
-            <a id="google-reviews-link" class="ghost-button whatsapp-cta" href="#" target="_blank" rel="noopener" data-track-event="click_google_reviews">Abrir no Google</a>
+          <div id="reviews-summary" class="social-source-shell">
+            <div class="social-empty">Carregando avaliacoes publicas...</div>
           </div>
-          <script defer async src="https://cdn.trustindex.io/loader.js?515aa3166d9e5507174662c9e55"></script>
+          <div class="button-row" style="margin-bottom:16px;">
+            <a id="google-reviews-link" class="ghost-button" href="#" target="_blank" rel="noopener" data-track-event="click_google_reviews">Abrir no Google</a>
+            <a id="doctoralia-reviews-link" class="ghost-button" href="#" target="_blank" rel="noopener">Abrir no Doctoralia</a>
+          </div>
+          <div class="social-card-grid" id="reviews-grid" aria-live="polite">
+            <div class="social-empty">Carregando depoimentos de pacientes...</div>
+          </div>
         </div>
       </div>
     </section>
@@ -1300,7 +1537,12 @@
       </div>
       <div class="widget-shell group" data-reveal>
         <div class="widget-body">
-          <script defer async src="https://cdn.trustindex.io/loader-feed.js?11ca21166ed855057d763f3da3e"></script>
+          <div id="instagram-profile-shell">
+            <div class="social-empty">Carregando perfil do Instagram...</div>
+          </div>
+          <div class="instagram-feed-grid" id="instagram-feed-grid" aria-live="polite">
+            <div class="social-empty">Carregando posts publicos...</div>
+          </div>
         </div>
       </div>
     </section>
@@ -2538,6 +2780,7 @@
   </script>
 
   <script src="config.js"></script>
+  <script src="js/social-proof.js"></script>
   <script src="js/butterfly-cursor.js"></script>
 </body>
 </html>
