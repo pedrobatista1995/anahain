@@ -2,16 +2,12 @@ services:
   - type: web
     name: anahain-demo
     runtime: docker
-    plan: starter
+    plan: free
     dockerfilePath: ./Dockerfile
     healthCheckPath: /
-    disk:
-      name: data
-      mountPath: /var/data
-      sizeGB: 1
     envVars:
       - key: MEDICAL_DATA_DIR
-        value: /var/data
+        value: /tmp/medical-data
       - key: MEDICAL_ADMIN_USER
         value: medico
       - key: MEDICAL_ADMIN_PASSWORD

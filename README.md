@@ -34,7 +34,7 @@ Passos:
 1. Entre no Render e conecte o repositorio `pedrobatista1995/anahain`.
 2. Crie o servico usando o Blueprint do repositorio ou `New > Web Service`.
 3. Mantenha o runtime `Docker`.
-4. Use um plano pago com disco persistente e confirme o `mountPath` em `/var/data`.
+4. Use o plano `Free`.
 5. Defina `MEDICAL_ADMIN_PASSWORD` no painel do Render.
 6. Faca o deploy.
 7. Ao final, acesse a URL `onrender.com` gerada e depois abra `/admin.html`.
@@ -43,7 +43,15 @@ Depois do primeiro deploy:
 
 - entre no painel administrativo;
 - configure `public_base_url` com a URL publica do Render;
-- ajuste SMTP se quiser que cancelamentos e avisos por email funcionem.
+
+Limitacoes importantes do plano Free no Render:
+
+- o servico entra em idle apos 15 minutos sem trafego e pode levar cerca de 1 minuto para voltar;
+- arquivos locais sao perdidos em redeploy, restart e spin down, incluindo o banco SQLite;
+- o plano Free nao aceita disco persistente;
+- o plano Free nao permite envio SMTP nas portas 25, 465 e 587.
+
+Para uma demo temporaria isso pode servir. Para uma demo estavel com dados preservados, o caminho correto e usar plano pago com disco persistente ou migrar o banco para Postgres.
 
 ## Publicacao para demo do cliente
 
